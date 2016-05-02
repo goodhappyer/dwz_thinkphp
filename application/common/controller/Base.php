@@ -9,6 +9,7 @@ use think\Cache;
 
 class Base extends Controller
 {
+	protected $visitor = null; //访问者
 	protected function _initialize() 
 	{
 		/*初始化配置*/

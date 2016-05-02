@@ -1,17 +1,14 @@
 <?php
 namespace app\admin\controller;
-use app\common\controller\Base;
+use app\common\controller\Backend;
 use think\Cache;
 
-class Index extends Base
+class Index extends Backend
 {
-	protected function _initialize() 
+	public function _initialize() 
 	{
+		$this->_name="setting";
 		parent::_initialize();
-	}
-	public function index()
-	{
-		dump(Cache::get("a"));	
 	}
 }
 
