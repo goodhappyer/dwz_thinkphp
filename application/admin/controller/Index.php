@@ -7,7 +7,7 @@ class Index extends Backend
 {
 	public function _initialize() 
 	{
-		$this->_name="setting";
+		$this->_name="admin";
 		parent::_initialize();
 	}
 }

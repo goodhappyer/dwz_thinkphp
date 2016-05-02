@@ -4,7 +4,8 @@ use app\common\controller\Base;
 use think\Controller;
 use think\Db;
 use think\Cache;
-use think\Input; 
+use think\Input;
+use think\View; 
 /*
  * 后台控制器基类
  *
@@ -13,11 +14,12 @@ use think\Input;
 class Backend extends Base
 {
 	protected $_name;
-	protected $_menu = array();
+	protected $menu = array();
 	protected $_table;
 	protected $search=[]; //显示查找数据
 	protected $_search=[]; //查找数据库的字段
 	protected $_search_like_fields;
+	protected $view;
 	public function _initialize() 
 	{
         	parent::_initialize();
@@ -33,10 +35,19 @@ class Backend extends Base
 				die('$this->name is null');
 			}
 		}
+		$this->view=new View();
+		$this->view->assign("menu",$this->menu);
     	}
 	protected function _check_priv()
 	{
-		
+		if(CONTROLLER_NAME=='login')
+		{
+			return true;
+		}
+		if($this->visitor==null)
+		{
+			$this->redirect("login/index");	
+		}
 	}
 	protected function _create_search($time_field=null)
 	{
@@ -62,6 +73,7 @@ class Backend extends Base
 			$this->_search[$time_field]=array("between",array(strtotime($starttime),strtotime($endtime)+60*60*24));
 		}
 		$this->search=$this->_search;
+		$this->view->assign("search",$this->search);
 	}
 	/**
      	* 列表页面
@@ -69,7 +81,7 @@ class Backend extends Base
     	public function index() 
 	{
 		$this->_list($this->_create_search());
-		$this->display();
+		return $this->view->fetch();
 	}
 	/*
 	*
@@ -80,9 +92,8 @@ class Backend extends Base
 		{
 			$table=$this->_table;
 		}
-		foreach($this->_search as $k=>$v)
-		{
-			$this->_table->where($k);
-		}
+		$this->_table->where($search);
+		$list=$this->_table->select();
+		$this->view->assign("list",$list);
 	}
 }
