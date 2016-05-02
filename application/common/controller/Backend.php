@@ -15,8 +15,8 @@ class Backend extends Base
 	protected $_name;
 	protected $_menu = array();
 	protected $_table;
-	protected $search;
-	protected $_search;
+	protected $search=[]; //显示查找数据
+	protected $_search=[]; //查找数据库的字段
 	protected $_search_like_fields;
 	public function _initialize() 
 	{
@@ -61,6 +61,7 @@ class Backend extends Base
     			$this->search['starttime']=I("starttime");
 			$this->_search[$time_field]=array("between",array(strtotime($starttime),strtotime($endtime)+60*60*24));
 		}
+		$this->search=$this->_search;
 	}
 	/**
      	* 列表页面
@@ -79,7 +80,7 @@ class Backend extends Base
 		{
 			$table=$this->_table;
 		}
-		foreach($search as $k=>$v)
+		foreach($this->_search as $k=>$v)
 		{
 			$this->_table->where($k);
 		}
