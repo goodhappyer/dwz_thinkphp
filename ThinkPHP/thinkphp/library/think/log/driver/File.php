@@ -39,7 +39,6 @@ class File
     {
         $now         = date($this->config['time_format']);
         $destination = $this->config['path'] . date('y_m_d') . '.log';
-
         !is_dir($this->config['path']) && mkdir($this->config['path'], 0755, true);
 
         //检测日志文件大小，超过配置大小则备份日志文件重新生成

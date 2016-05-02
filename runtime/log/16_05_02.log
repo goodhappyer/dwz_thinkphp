@@ -1,0 +1,170 @@
+[ 2016-05-02T09:20:37+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Index/index.html
+[log] 127.0.0.1:8083/Admin/Index/index.html [运行时间：0.004631s] [吞吐率：215.93req/s] [内存消耗：400.98kb] [文件加载：14]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/ThinkPHP/thinkphp/convention.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Index',
+    2 => 'index',
+  ),
+)
+[error] [10005]module [ admin ] not exists [/webscripts/dwz_thinkphp/ThinkPHP/thinkphp/library/think/App.php:208]
+[info] [ LOG ] INIT File: array (
+  'path' => './runtime/log/',
+)
+
+[ 2016-05-02T09:22:58+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin
+[log] 127.0.0.1:8083/Admin [运行时间：0.010320s] [吞吐率：96.90req/s] [内存消耗：400.66kb] [文件加载：14]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/ThinkPHP/thinkphp/convention.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[error] [10005]module [ admin ] not exists [/webscripts/dwz_thinkphp/ThinkPHP/thinkphp/library/think/App.php:208]
+[info] [ LOG ] INIT File: array (
+  'path' => './runtime/log/',
+)
+
+[ 2016-05-02T09:30:08+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin
+[log] 127.0.0.1:8083/Admin [运行时间：0.005325s] [吞吐率：187.79req/s] [内存消耗：400.66kb] [文件加载：14]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/ThinkPHP/thinkphp/convention.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[error] [10005]module [ admin ] not exists [/webscripts/dwz_thinkphp/ThinkPHP/thinkphp/library/think/App.php:208]
+[info] [ LOG ] INIT File: array (
+  'path' => './runtime/log/',
+)
+
+[ 2016-05-02T09:30:09+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin
+[log] 127.0.0.1:8083/Admin [运行时间：0.011640s] [吞吐率：85.91req/s] [内存消耗：400.66kb] [文件加载：14]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/ThinkPHP/thinkphp/convention.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[error] [10005]module [ admin ] not exists [/webscripts/dwz_thinkphp/ThinkPHP/thinkphp/library/think/App.php:208]
+[info] [ LOG ] INIT File: array (
+  'path' => './runtime/log/',
+)
+
+[ 2016-05-02T09:30:14+08:00 ] 127.0.0.1 127.0.0.1 GET /admin
+[log] 127.0.0.1:8083/admin [运行时间：0.011543s] [吞吐率：86.63req/s] [内存消耗：400.66kb] [文件加载：14]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/ThinkPHP/thinkphp/convention.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[error] [10005]module [ admin ] not exists [/webscripts/dwz_thinkphp/ThinkPHP/thinkphp/library/think/App.php:208]
+[info] [ LOG ] INIT File: array (
+  'path' => './runtime/log/',
+)
+
+[ 2016-05-02T09:30:31+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.013634s] [吞吐率：73.35req/s] [内存消耗：400.23kb] [文件加载：14]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/ThinkPHP/thinkphp/convention.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[error] [10005]module [ index ] not exists [/webscripts/dwz_thinkphp/ThinkPHP/thinkphp/library/think/App.php:208]
+[info] [ LOG ] INIT File: array (
+  'path' => './runtime/log/',
+)
+
+[ 2016-05-02T09:31:04+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.004263s] [吞吐率：234.58req/s] [内存消耗：400.23kb] [文件加载：14]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/ThinkPHP/thinkphp/convention.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[error] [10005]module [ index ] not exists [/webscripts/dwz_thinkphp/ThinkPHP/thinkphp/library/think/App.php:208]
+[info] [ LOG ] INIT File: array (
+  'path' => './runtime/log/',
+)
+
+[ 2016-05-02T09:34:08+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.004808s] [吞吐率：207.98req/s] [内存消耗：400.23kb] [文件加载：14]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/ThinkPHP/thinkphp/convention.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[error] [10005]module [ index ] not exists [/webscripts/dwz_thinkphp/ThinkPHP/thinkphp/library/think/App.php:208]
+[info] [ LOG ] INIT File: array (
+  'path' => './runtime/log/',
+)
+
+[ 2016-05-02T09:34:14+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.010295s] [吞吐率：97.14req/s] [内存消耗：400.23kb] [文件加载：14]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/ThinkPHP/thinkphp/convention.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[error] [10005]module [ index ] not exists [/webscripts/dwz_thinkphp/ThinkPHP/thinkphp/library/think/App.php:208]
+[info] [ LOG ] INIT File: array (
+  'path' => './runtime/log/',
+)
+
+[ 2016-05-02T09:34:15+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.015040s] [吞吐率：66.49req/s] [内存消耗：400.23kb] [文件加载：14]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/ThinkPHP/thinkphp/convention.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[error] [10005]module [ index ] not exists [/webscripts/dwz_thinkphp/ThinkPHP/thinkphp/library/think/App.php:208]
+[info] [ LOG ] INIT File: array (
+  'path' => './runtime/log/',
+)
+
