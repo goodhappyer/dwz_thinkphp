@@ -8,5 +8,7 @@ class AdminUser extends \think\Model
 	// 以上定义需要配合insert、update或者auto才能生效
 	protected $insert = ['create_time'];
 	protected $update = ['update_time'];
+	public $token;
+	
 	use UserTrait;
 }

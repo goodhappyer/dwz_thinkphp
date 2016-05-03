@@ -6,10 +6,11 @@ use think\Db;
 use think\Cache;
 use think\Input;
 use think\View; 
+use think\Session;
 /*
  * 后台控制器基类
  *
- * @author andery
+ * @author goodhappyer
  */
 class Backend extends Base
 {
@@ -22,6 +23,7 @@ class Backend extends Base
 	protected $view;
 	public function _initialize() 
 	{
+		session_start();
         	parent::_initialize();
         	$this->_check_priv();
 		if($this->_mod==null)
@@ -45,9 +47,11 @@ class Backend extends Base
 		{
 			return true;
 		}
+		$user=model("AdminUser");
+		$this->visitor=$user->check_token(Session::get("token"));
 		if($this->visitor==null)
 		{
-			$this->redirect("login/index");	
+		//	$this->redirect("login/index");	
 		}
 	}
 	protected function _create_search($time_field=null)

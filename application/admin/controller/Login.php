@@ -5,9 +5,14 @@ use think\Db;
 use think\View;
 use think\Input;
 use think\Session;
+
 class Login extends Backend
 {
 	var $_name="AdminUser";
+	public function _initialize() 
+	{
+        	parent::_initialize();
+	}
 	public function index() 
 	{
 		$view=new View();
@@ -17,25 +22,12 @@ class Login extends Backend
 	{
 		$username=INPUT::request('username');
 		$password=INPUT::request('password');
-		$this->do_login($username,$password);	
-	}
-	private function  do_login($username,$password)
-	{
-		$r=$this->_mod->login($username,$password);
-		print_r($r);
-	}
-	private function do_login_byid($id)
-	{
-		if(is_numeric($id))
+		$this->_mod->login($username,$password);
+		print_r($this->_mod);	
+		if($this->_mod->token!=null)
 		{
-			print_r($this->_mod->find());
-		//	$r=$this->_mod->where(['id'=>$id])->find();
-			print_r($r);
-			die();
-			Session::set("visitor",$r);
-			$this->redircet("admin/index");
+			Session::set("token",$this->_mod->token);
+			$this->redirect("index/index");
 		}
 	}
 }
-
-
