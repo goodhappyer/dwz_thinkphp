@@ -6,6 +6,7 @@ namespace app\common\controller;
 use think\Controller;
 use think\Db;
 use think\Cache;
+use app\common\model\Setting;
 
 class Base extends Controller
 {
@@ -13,7 +14,9 @@ class Base extends Controller
 	protected function _initialize() 
 	{
 		/*初始化配置*/
-		foreach(Db::name('setting')->field("name,data")->select() as $v)
+		$setting=new Setting;
+		$r=$setting->all();
+		foreach($r as $v)
 		{
 			Cache::set($v['name'],$v['data']);
 		}

@@ -7,7 +7,7 @@ use think\Input;
 use think\Session;
 class Login extends Backend
 {
-	var $_name="admin";
+	var $_name="AdminUser";
 	public function index() 
 	{
 		$view=new View();
@@ -21,18 +21,15 @@ class Login extends Backend
 	}
 	private function  do_login($username,$password)
 	{
-		print_r($this->_table);
-		$r=$this->_table->where(['username'=>$username,'password'=>$password])->find();
-	//	$this->do_login_byid($r['id']);
-
-		$r=$this->_table->where(['username'=>$username,'password'=>$password])->find();
+		$r=$this->_mod->login($username,$password);
+		print_r($r);
 	}
 	private function do_login_byid($id)
 	{
 		if(is_numeric($id))
 		{
-			print_r($this->_table->find());
-		//	$r=$this->_table->where(['id'=>$id])->find();
+			print_r($this->_mod->find());
+		//	$r=$this->_mod->where(['id'=>$id])->find();
 			print_r($r);
 			die();
 			Session::set("visitor",$r);

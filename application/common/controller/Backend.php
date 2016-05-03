@@ -15,7 +15,7 @@ class Backend extends Base
 {
 	protected $_name;
 	protected $menu = array();
-	protected $_table;
+	protected $_mod;
 	protected $search=[]; //显示查找数据
 	protected $_search=[]; //查找数据库的字段
 	protected $_search_like_fields;
@@ -24,11 +24,12 @@ class Backend extends Base
 	{
         	parent::_initialize();
         	$this->_check_priv();
-		if($this->_table==null)
+		if($this->_mod==null)
 		{
 			if($this->_name!=null)
 			{
-				$this->_table=Db::name($this->_name);
+				$modepath='app\\common\\model\\'.$this->_name;
+				$this->_mod=new $modepath; 
 			}
 			else
 			{
@@ -51,7 +52,7 @@ class Backend extends Base
 	}
 	protected function _create_search($time_field=null)
 	{
-		$tableinfo=$this->_table->getTableInfo();
+		$tableinfo=$this->_mod->getTableInfo();
 		foreach($tableinfo['fields'] as $v)
 		{
 			if(INPUT::request($v)!=null)
@@ -90,10 +91,10 @@ class Backend extends Base
 	{
 		if($table==null)
 		{
-			$table=$this->_table;
+			$table=$this->_mod;
 		}
-		$this->_table->where($search);
-		$list=$this->_table->select();
+		$this->_mod->where($search);
+		$list=$this->_mod->select();
 		$this->view->assign("list",$list);
 	}
 }
