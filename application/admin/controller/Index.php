@@ -13,8 +13,9 @@ class Index extends Backend
 	}
 	public function index()
 	{
-		$view=new View();
-		return $view->fetch();
+		print_r($this->_mod->get_mymeun(0));
+	//	$view=new View();
+	//	return $view->fetch();
 	}
 }
 
