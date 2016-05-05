@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:64:"/webscripts/dwz_thinkphp/application/admin/view/index/index.html";i:1462220117;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:64:"/webscripts/dwz_thinkphp/application/admin/view/index/index.html";i:1462405785;}*/ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -135,6 +135,16 @@ $(function(){
 				<div class="toggleCollapse"><h2>主菜单</h2><div>收缩</div></div>
 
 				<div class="accordion" fillSpace="sidebar">
+					<div class="accordionHeader">
+						<h2><span>Folder</span>界面组件</h2>
+					</div>
+
+					<div class="accordionContent">
+						<ul class="tree treeFolder">
+						<?php echo $menu; ?>
+						</ul>
+					</div>
+					
 					<div class="accordionHeader">
 						<h2><span>Folder</span>界面组件</h2>
 					</div>

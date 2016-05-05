@@ -3,22 +3,60 @@ namespace app\common\model;
 
 class AdminMenu extends \think\Model
 {
-	var $T=array();
+	private $tree_str="";
 	public function get_mymeun($role_id)
 	{
-		print_r($this->tree(0,0,0));
-		$this->data=$this->T;
+		$this->tree(0,0,0,"",'T');
+		eval($this->tree_str);
+		$this->data=$T;
 		return $this->data;	
+
 	}
-	public function tree($pid,$level,$ids)
+	/*
+		专为dwz写的
+	*/
+	public function get_dwxmenu()
+	{
+		return $this->get_dwzget_child($this->data);
+	}
+	public function get_dwzget_child($data=array())
+	{
+		$str="";
+		foreach($data as $v)
+		{
+			if($v['menu_type']==0)
+			{
+
+				$str=$str."<li><a href=''>".$v['name'].'</a><ul>';
+				$str=$str.$this->get_dwzget_child($v['item']);
+				$str=$str."</ul></li>";
+
+			}
+			else if($v['menu_type']==1)
+			{
+					
+				$str=$str.'<li><a href="/Admin/'.$v['module_name'].'/'.$v['action_name'].'" target="navTab" rel="main">'.$v['name'].'</a></li>';
+			}
+		}
+		return $str;
+	}
+	/*
+	*这个好难啊		
+	*/
+	public function tree($pid,$level,$ids,$varstr,$T)
 	{
 		$level++;	
-		$T=self::db()->where(['pid'=>$pid])->select();
-		if($T!=null)
+		$r=self::db()->where(['pid'=>$pid])->select();
+		if($r!=null)
 		{
-			foreach($T as $k=> $v)
+			foreach($r as $k=> $v)
 			{
-				return $this->tree($v['id'],$level,$ids);
+				$fields=self::db()->getTableInfo("","fields");
+				foreach( $fields as $field)
+				{
+					$this->tree_str=$this->tree_str.'$'.$T.$varstr.'['.$k.']["'.$field.'"]="'.$v[$field].'";';
+				}
+				$this->tree($v['id'],$level,$ids,$varstr.'['.$k.']'.'["item"]',$T);
 			}
 		}
 	}

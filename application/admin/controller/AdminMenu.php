@@ -4,7 +4,7 @@ use app\common\controller\Backend;
 use think\Cache;
 use think\View;
 
-class Index extends Backend
+class AdminMenu extends Backend
 {
 	public function _initialize() 
 	{
