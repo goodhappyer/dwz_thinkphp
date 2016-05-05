@@ -13,7 +13,7 @@ class Index extends Backend
 	}
 	public function index()
 	{
-		$menu_list=$this->_mod->get_dwzget_child($this->_mod->get_mymeun(0));
+		$menu_list=$this->_mod->get_dwzget_child($this->_mod->get_mymeun(0,0));
 		$view=new View();
 		$view->assign("menu",$menu_list);
 		return $view->fetch();

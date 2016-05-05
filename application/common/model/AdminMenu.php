@@ -4,16 +4,16 @@ namespace app\common\model;
 class AdminMenu extends \think\Model
 {
 	private $tree_str="";
-	public function get_mymeun($role_id)
+	public function get_mymeun($menu_id,$role_id)
 	{
-		$this->tree(0,0,0,"",'T');
+		$this->tree($menu_id,0,0,"",'T');
 		eval($this->tree_str);
 		$this->data=$T;
 		return $this->data;	
 
 	}
 	/*
-		专为dwz写的
+	专为dwz写的
 	*/
 	public function get_dwxmenu()
 	{
@@ -35,7 +35,7 @@ class AdminMenu extends \think\Model
 			else if($v['menu_type']==1)
 			{
 					
-				$str=$str.'<li><a href="/Admin/'.$v['module_name'].'/'.$v['action_name'].'" target="navTab" rel="main">'.$v['name'].'</a></li>';
+				$str=$str.'<li><a href="/Admin/'.$v['module_name'].'/'.$v['action_name'].'/menu_id/'.$v['id'].'" target="navTab" rel="main">'.$v['name'].'</a></li>';
 			}
 		}
 		return $str;
