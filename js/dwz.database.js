@@ -31,6 +31,13 @@
 					}
 				}
 			});
+			//自己增加的
+			var callback = _lookup['callback']; 
+            		try
+            		{
+                		eval(callback+"();");
+            		}
+            		catch (e){}
 		},
 		bringBack: function(args){
 			$.bringBackSuggest(args);
