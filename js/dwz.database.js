@@ -2,7 +2,8 @@
  * @author ZhangHuihua@msn.com
  */
 (function($){
-	var _lookup = {currentGroup:"", suffix:"", $target:null, pk:"id"};
+
+	var _lookup = {currentGroup:"", suffix:"", $target:null, pk:"id",callback:null};/*callback:null原版没有*/
 	var _util = {
 		_lookupPrefix: function(key){
 			var strDot = _lookup.currentGroup ? "." : "";
@@ -31,8 +32,10 @@
 					}
 				}
 			});
-			//自己增加的
+			//自己增加的回调
 			var callback = _lookup['callback']; 
+
+			//alert(callback);
             		try
             		{
                 		eval(callback+"();");
@@ -54,8 +57,10 @@
 					resizable:eval($this.attr("resizable") || "true")
 				};
 				$this.click(function(event){
+					//alert($this.attr("callback"));
 					_lookup = $.extend(_lookup, {
 						currentGroup: $this.attr("lookupGroup") || "",
+						callback: $this.attr("callback") || "",  /*  自己加的回调  */
 						suffix: $this.attr("suffix") || "",
 						$target: $this,
 						pk: $this.attr("lookupPk") || "id"

@@ -41,6 +41,34 @@ class Backend extends Base
 		$this->view=new View();
 		$this->view->assign("menu",$this->menu);
     	}
+	/*
+	dwz 返回结果
+	$statusCode 200 成功 300 失败 301需要登陆
+	
+	*/
+	public function dwz_ajax_return($statusCode,$message,$navTabId,$callbackType,$forwardUrl)
+	{
+		$T=array();
+		$T['statusCode']=$statusCode;
+		$T['message']=$message;
+		$T['navTabId']=$navTabId;
+		$T['callbackType']=$callbackType;
+		$T['forwardUrl']=$forwardUrl;
+		echo json_encode($T);
+		exit ;	
+	}
+
+	public function dwz_ajax_return_ok($message="操作成功",$navTabId="",$callbackType="closeCurrent",$forwardUrl="")
+	{
+		$statusCode=200;
+		$this->dwz_ajax_return($statusCode,$message,$navTabId,$callbackType,$forwardUrl);
+	}
+
+	public function dwz_ajax_return_err($message="操作失败",$navTabId="",$callbackType="",$forwardUrl="")
+	{
+		$statusCode=300;
+		$this->dwz_ajax_return($statusCode,$message,$navTabId,$callbackType,$forwardUrl);
+	}
 	protected function _check_priv()
 	{
 		if(CONTROLLER_NAME=='login')

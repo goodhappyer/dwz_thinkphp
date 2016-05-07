@@ -115,7 +115,7 @@
 				var options = '<ul class="comboxop" id="op_combox_'+ cid +'">';
 				$("option", $this).each(function(){
 					var option = $(this);
-					options +="<li><a class=\""+ (value==option[0].value?"selected":"") +"\" href=\"#\" value=\"" + option[0].value + "\">" + option[0].text + "</a></li>";
+					options +="<li><a class=\""+ (value==option[0].value?"selected":"") +"\" href=\"javascript:void(0);\" value=\"" + option[0].value + "\">" + option[0].text + "</a></li>";
 				});
 				options +="</ul>";
 				

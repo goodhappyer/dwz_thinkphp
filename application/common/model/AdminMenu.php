@@ -19,23 +19,42 @@ class AdminMenu extends \think\Model
 	{
 		return $this->get_dwzget_child($this->data);
 	}
-	public function get_dwzget_child($data=array())
+	public function get_dwzget_child($data=array(),$is_lookup=0)
 	{
 		$str="";
 		foreach($data as $v)
 		{
-			if($v['menu_type']==0)
+			if($v['menu_type']==0 && isset($v['item']))
 			{
-
-				$str=$str."<li><a href=''>".$v['name'].'</a><ul>';
-				$str=$str.$this->get_dwzget_child($v['item']);
-				$str=$str."</ul></li>";
+				
+				if($is_lookup==0)
+				{
+					$str=$str."<li><a href=''>".$v['name'].'</a><ul>';
+					$str=$str.$this->get_dwzget_child($v['item'],$is_lookup);
+					$str=$str."</ul></li>";
+				}
+				else
+				{
+					
+					$str=$str.'<li>'.'<a  href="javascript:" onclick="$.bringBack({menu_name:\''.$v['name'].'\', menu_id:\''.$v['id'].'\'})" title="查找带回">'.$v['name'].'</a></li><ul>';
+					$str=$str.$this->get_dwzget_child($v['item'],$is_lookup);
+					$str=$str."</ul></li>";
+				}
 
 			}
 			else if($v['menu_type']==1)
 			{
 					
-				$str=$str.'<li><a href="/Admin/'.$v['module_name'].'/'.$v['action_name'].'/menu_id/'.$v['id'].'" target="navTab" rel="main">'.$v['name'].'</a></li>';
+				if($is_lookup==0)
+				{
+					
+					$str=$str.'<li><a href="/Admin/'.$v['module_name'].'/'.$v['action_name'].'/menu_id/'.$v['id'].'" target="navTab" rel="main">'.$v['name'].'</a></li>';
+				}
+				else
+				{	
+					$str=$str.'<li>'.'<a href="javascript:" onclick="$.bringBack({menu_name:\''.$v['name'].'\',menu_id:\''.$v['id'].'\'})" title="查找带回">'.$v['name'].'</a></li>';
+				}
+
 			}
 		}
 		return $str;
