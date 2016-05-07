@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 2016-05-02 00:32:29
+-- Generation Time: 2016-05-07 22:48:12
 -- 服务器版本： 10.1.13-MariaDB
 -- PHP Version: 7.0.6
 
@@ -228,27 +228,6 @@ INSERT INTO `role_user` (`role_id`, `user_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `tp_admin`
---
-
-CREATE TABLE IF NOT EXISTS `tp_admin` (
-  `id` int(10) NOT NULL,
-  `username` varchar(20) NOT NULL DEFAULT '0' COMMENT '用户名',
-  `password` varchar(32) NOT NULL DEFAULT '0' COMMENT '密码',
-  `role_id` smallint(5) NOT NULL COMMENT '权限组',
-  `name` varchar(50) NOT NULL COMMENT '名字',
-  `gender` tinyint(1) NOT NULL DEFAULT '0' COMMENT '1男，0女',
-  `reg_ip` varchar(15) NOT NULL,
-  `reg_time` int(10) unsigned NOT NULL DEFAULT '0',
-  `last_time` int(10) unsigned NOT NULL DEFAULT '0',
-  `last_ip` varchar(15) DEFAULT '0',
-  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1为在职，0为离职',
-  `avatar` varchar(255) NOT NULL COMMENT '头像'
-) ENGINE=MyISAM AUTO_INCREMENT=202 DEFAULT CHARSET=utf8 COMMENT='管理员表';
-
--- --------------------------------------------------------
-
---
 -- 表的结构 `tp_admin_auth`
 --
 
@@ -266,14 +245,31 @@ CREATE TABLE IF NOT EXISTS `tp_admin_auth` (
 CREATE TABLE IF NOT EXISTS `tp_admin_menu` (
   `id` smallint(6) NOT NULL,
   `name` varchar(50) NOT NULL,
-  `pid` smallint(6) NOT NULL,
+  `pid` smallint(6) NOT NULL DEFAULT '0',
   `module_name` varchar(255) NOT NULL,
   `action_name` varchar(255) NOT NULL,
   `data` varchar(120) NOT NULL,
   `remark` varchar(255) NOT NULL,
   `ordid` tinyint(3) unsigned NOT NULL DEFAULT '255',
-  `display` tinyint(1) NOT NULL DEFAULT '1'
-) ENGINE=MyISAM AUTO_INCREMENT=434 DEFAULT CHARSET=utf8;
+  `display` tinyint(1) NOT NULL DEFAULT '1',
+  `menu_type` int(11) NOT NULL COMMENT '0菜单分类，1菜单，2功能,3 栏目功能，3功能'
+) ENGINE=MyISAM AUTO_INCREMENT=444 DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `tp_admin_menu`
+--
+
+INSERT INTO `tp_admin_menu` (`id`, `name`, `pid`, `module_name`, `action_name`, `data`, `remark`, `ordid`, `display`, `menu_type`) VALUES
+(434, '菜单管理', 0, 'admin_menu', 'index', '', '', 255, 1, 0),
+(435, '菜单列表', 434, 'admin_menu', 'index', '', '', 255, 1, 1),
+(438, 'efsa', 0, 'fadf', 'saf', 'afs', 'af', 255, 1, 0),
+(436, '增加', 435, 'admin_menu', 'add', '', '', 255, 1, 2),
+(437, '删除', 435, 'admin_menu', 'delete', '?ids={menu_id}', '', 255, 1, 3),
+(439, 'wdaf', 0, 'afs', 'fas', '', 'af', 255, 1, 0),
+(440, 'ewr', 0, 'we', 'ew', '', 'ewqew', 255, 1, 0),
+(441, '2222', 434, '333', '444444', '', '5555', 255, 1, 0),
+(442, 'das', 434, 'sad', 'sad', 'sda', 'sad', 255, 1, 0),
+(443, 'dsa', 434, 'dsa', 'sad', 'sad', 'das', 255, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -288,6 +284,59 @@ CREATE TABLE IF NOT EXISTS `tp_admin_role` (
   `ordid` tinyint(3) NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `tp_admin_user`
+--
+
+CREATE TABLE IF NOT EXISTS `tp_admin_user` (
+  `id` int(10) NOT NULL,
+  `username` varchar(20) NOT NULL DEFAULT '0' COMMENT '用户名',
+  `password` varchar(32) NOT NULL DEFAULT '0' COMMENT '密码',
+  `role_id` smallint(5) NOT NULL DEFAULT '0' COMMENT '权限组',
+  `name` varchar(50) NOT NULL COMMENT '名字',
+  `gender` tinyint(1) NOT NULL DEFAULT '0' COMMENT '1男，0女',
+  `reg_ip` varchar(15) NOT NULL,
+  `reg_time` int(10) unsigned NOT NULL DEFAULT '0',
+  `last_time` int(10) unsigned NOT NULL DEFAULT '0',
+  `last_ip` varchar(15) DEFAULT '0',
+  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1为在职，0为离职',
+  `avatar` varchar(255) NOT NULL COMMENT '头像',
+  `create_time` int(11) NOT NULL,
+  `update_time` int(11) NOT NULL,
+  `token` varchar(255) NOT NULL
+) ENGINE=MyISAM AUTO_INCREMENT=204 DEFAULT CHARSET=utf8 COMMENT='管理员表';
+
+--
+-- 转存表中的数据 `tp_admin_user`
+--
+
+INSERT INTO `tp_admin_user` (`id`, `username`, `password`, `role_id`, `name`, `gender`, `reg_ip`, `reg_time`, `last_time`, `last_ip`, `status`, `avatar`, `create_time`, `update_time`, `token`) VALUES
+(202, 'admin', 'admin', 0, '', 0, '', 0, 0, '0', 1, '', 0, 1462647177, '34173036_202');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `tp_setting`
+--
+
+CREATE TABLE IF NOT EXISTS `tp_setting` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `data` text NOT NULL,
+  `remark` varchar(255) NOT NULL
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `tp_setting`
+--
+
+INSERT INTO `tp_setting` (`id`, `name`, `data`, `remark`) VALUES
+(1, 'a', 'abc', ''),
+(2, 'a', 'abc', ''),
+(3, 'super_admin_id', '202', '超级管理员id');
 
 -- --------------------------------------------------------
 
@@ -375,12 +424,6 @@ ALTER TABLE `role_user`
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `tp_admin`
---
-ALTER TABLE `tp_admin`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `tp_admin_auth`
 --
 ALTER TABLE `tp_admin_auth`
@@ -400,6 +443,20 @@ ALTER TABLE `tp_admin_menu`
 --
 ALTER TABLE `tp_admin_role`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tp_admin_user`
+--
+ALTER TABLE `tp_admin_user`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
+
+--
+-- Indexes for table `tp_setting`
+--
+ALTER TABLE `tp_setting`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `name` (`name`);
 
 --
 -- Indexes for table `user`
@@ -433,20 +490,25 @@ ALTER TABLE `node`
 ALTER TABLE `role`
   MODIFY `id` smallint(6) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
--- AUTO_INCREMENT for table `tp_admin`
---
-ALTER TABLE `tp_admin`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=202;
---
 -- AUTO_INCREMENT for table `tp_admin_menu`
 --
 ALTER TABLE `tp_admin_menu`
-  MODIFY `id` smallint(6) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=434;
+  MODIFY `id` smallint(6) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=444;
 --
 -- AUTO_INCREMENT for table `tp_admin_role`
 --
 ALTER TABLE `tp_admin_role`
   MODIFY `id` tinyint(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
+--
+-- AUTO_INCREMENT for table `tp_admin_user`
+--
+ALTER TABLE `tp_admin_user`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=204;
+--
+-- AUTO_INCREMENT for table `tp_setting`
+--
+ALTER TABLE `tp_setting`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `user`
 --
