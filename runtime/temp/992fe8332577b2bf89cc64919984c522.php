@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"/webscripts/dwz_thinkphp/application/admin/view/admin_menu/add.html";i:1462660030;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"/webscripts/dwz_thinkphp/application/admin/view/admin_menu/add.html";i:1462660226;}*/ ?>
 <div class="pageContent">
 	<form method="post" action="/Admin/Admin_menu/add" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxDone);">
 		<div class="pageFormContent" layoutH="56">
@@ -40,7 +40,7 @@
 				<label>所在节点：</label>
 				<input type="hidden" name="pid" id="pid" value="0">
 				<input type="hidden" name="MenuLookup.menu_id" id="menu_id" value="${MenuLookup.menu_id}"/>
-				<input type="text" class="required" name="MenuLookup.menu_name" value="" suggestFields="menu_name,menu_id" suggestUrl="/Admin/admin_menu/Lookup" lookupGroup="MenuLookup" />
+				<input type="text" name="MenuLookup.menu_name" value="不选是根节点" suggestFields="menu_name,menu_id" suggestUrl="/Admin/admin_menu/Lookup" lookupGroup="MenuLookup" />
 
 				<a class="btnLook" href="/Admin/admin_menu/Lookup" lookupGroup="MenuLookup" callback="MenuLookup_callback" >查找带回</a>		
 			</p>
