@@ -11,5 +11,6 @@ class AdminUser extends Backend
 		$this->_name="AdminUser";
 		parent::_initialize();
 	}
-	use addTrait;
+	use AddTrait;
+	use IndexTrait;
 }
