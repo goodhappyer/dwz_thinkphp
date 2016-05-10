@@ -6,7 +6,7 @@
 	<input type="hidden" name="orderField" value="${param.orderField}" />
 </form>
 <div class="pageHeader">
-	<form onsubmit="return navTabSearch(this);" action="demo_page1.html" method="post">
+	<form onsubmit="return navTabSearch(this);" method="post" action="{$Think.MODULE_NAME}/{$Think.CONTROLLER_NAME}">
 	<div class="searchBar">
 	<table class="searchContent">
 			<tr>
@@ -23,8 +23,16 @@
 						<option value="广东">广东</option>
 					</select>
 				</td>
+
 				<td>
-					<input type="text" class="date" readonly="true" name='starttime' />
+					<select class="combox" name="province">
+						<option value="">状态</option>
+						<option value="0">禁用</option>
+						<option value="1">启用</option>
+					</select>
+				</td>
+				<td>
+					时间段:<input type="text" class="date" readonly="true" name='starttime' />
 					<input type="text" class="date" readonly="true" name='endtime' />
 				</td>
 			</tr>
@@ -42,11 +50,17 @@
 <div class="pageContent">
 	<div class="panelBar">
 		<ul class="toolBar">
-			<li><a class="add" href="demo_page4.html" target="navTab"><span>添加</span></a></li>
-			<li><a class="delete" href="demo/common/ajaxDone.html?uid={sid_user}" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
-			<li><a class="edit" href="demo_page4.html?uid={sid_user}" target="navTab"><span>修改</span></a></li>
-			<li class="line">line</li>
-			<li><a class="icon" href="demo/common/dwz-team.xls" target="dwzExport" targetType="navTab" title="实要导出这些记录吗?"><span>导出EXCEL</span></a></li>
+			<?php foreach($menu as $v)
+			{
+			?>
+			<li>
+				<a class="{$v.action_name}" 
+					href="/admin/{$v.module_name}/{$v.action_name}{$v.data}" target="navTab">
+					<span>{$v.name}</span></a>
+				</li>
+			<?php 
+			}
+			?>
 		</ul>
 	</div>
 	<table class="table" width="100%" layoutH="138">

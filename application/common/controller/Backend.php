@@ -41,6 +41,28 @@ class Backend extends Base
 		$this->view=new View();
 		$this->view->assign("menu",$this->menu);
     	}
+	protected function trigger($fun, &$params=array())
+	{
+		//函数存在
+		if(method_exists($this,$fun))
+		{
+			call_user_func(array($this,$fun),$params);
+		}
+		else
+		{
+			return false;
+		}
+		return true;
+
+	}
+	public  function before_index()
+	{
+		$menu_id=Input::get("menu_id");
+		$admin_menu=new \app\common\model\AdminMenu();
+		$menu_list=$admin_menu->get_mymeun($menu_id,0);
+		$this->view->assign("menu",$menu_list);
+
+	}
 	/*
 	dwz 返回结果
 	$statusCode 200 成功 300 失败 301需要登陆

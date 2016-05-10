@@ -30,11 +30,13 @@ trait indexTrait
 		$this->search=$this->_search;
 		$this->view->assign("search",$this->search);
 	}
+	
 	/**
      	* 列表页面
      	*/
     	public function index() 
 	{
+		$this->trigger("before_index");
 		$this->_list($this->_create_search());
 		return $this->view->fetch();
 	}	

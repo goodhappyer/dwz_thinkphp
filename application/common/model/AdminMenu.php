@@ -6,6 +6,7 @@ class AdminMenu extends \think\Model
 	private $tree_str="";
 	public function get_mymeun($menu_id,$role_id)
 	{
+		$T=array();
 		$this->tree($menu_id,0,0,"",'T');
 		eval($this->tree_str);
 		$this->data=$T;
