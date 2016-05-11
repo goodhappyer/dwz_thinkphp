@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"/webscripts/dwz_thinkphp/application/admin/view/admin_menu/index.html";i:1462488232;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"/webscripts/dwz_thinkphp/application/admin/view/admin_menu/index.html";i:1462918043;}*/ ?>
 <div class="pageContent">
 	<div class="panelBar">
 		<ul class="toolBar">
