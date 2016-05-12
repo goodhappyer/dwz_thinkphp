@@ -4,7 +4,7 @@
 
 ### 背景
 
-thinkphp5 + dwx。感谢 dwz http://j-ui.com 感谢 thinkphp5
+thinkphp5 + dwz。感谢 dwz http://j-ui.com 感谢 thinkphp5
 
 ### 配置
 
