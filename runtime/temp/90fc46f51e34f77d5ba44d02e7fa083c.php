@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:64:"/webscripts/dwz_thinkphp/application/admin/view/index/index.html";i:1462434315;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:64:"/webscripts/dwz_thinkphp/application/admin/view/index/index.html";i:1463096881;}*/ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -67,6 +67,8 @@
 <script src="bin/dwz.min.js" type="text/javascript"></script>
 -->
 <script src="js/dwz.regional.zh.js" type="text/javascript"></script>
+<script src="js_table_edit/mindmup-editabletable.js" type="text/javascript"></script>
+
 
 <script type="text/javascript">
 $(function(){

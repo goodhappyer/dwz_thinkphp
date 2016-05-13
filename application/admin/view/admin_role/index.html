@@ -21,7 +21,7 @@
 			?>
 		</ul>
 	</div>
-	<table class="table" width="100%" layoutH="75" id="table_{$Think.MODULE_NAME}_{$Think.CONTROLLER_NAME}">
+	<table class="table" width="100%" layoutH="75">
 		<thead>
 			<tr>
 				<th width="80" orderField="id"></th>
@@ -31,7 +31,7 @@
 				<th width="80"></th>
 			</tr>
 		</thead>
-		<tbody>
+		<tbody  id="table_{$Think.MODULE_NAME}_{$Think.CONTROLLER_NAME}">
 
 {volist name="list" id="vo"}
 			<tr target="sid_user" rel="1">
@@ -59,14 +59,5 @@
 	</div>
 </div>
 <script>
-$('#example3').Tabledit({
-    url: 'example.php',
-    editButton: false,
-    deleteButton: false,
-    hideIdentifier: true,
-    columns: {
-        identifier: [0, 'id'],
-        editable: [[2, 'firstname'], [3, 'lastname']]
-    }
-});
+$('#table_{$Think.MODULE_NAME}_{$Think.CONTROLLER_NAME}').editableTableWidget({editor: $('<textarea>')});
 </script>
