@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 2016-05-07 22:48:12
--- 服务器版本： 10.1.13-MariaDB
--- PHP Version: 7.0.6
+-- Generation Time: 2016-05-17 16:04:00
+-- 服务器版本： 5.5.47-MariaDB
+-- PHP Version: 5.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -319,6 +319,23 @@ INSERT INTO `tp_admin_user` (`id`, `username`, `password`, `role_id`, `name`, `g
 -- --------------------------------------------------------
 
 --
+-- 表的结构 `tp_jqgrid_info`
+--
+
+CREATE TABLE IF NOT EXISTS `tp_jqgrid_info` (
+  `id` int(11) NOT NULL,
+  `table_name` varchar(255) NOT NULL,
+  `field_name` varchar(255) NOT NULL,
+  `jqgrid_name` varchar(255) NOT NULL,
+  `jqgrid_index` varchar(255) NOT NULL,
+  `jqgrid_width` int(11) NOT NULL,
+  `jqgrid_align` varchar(10) NOT NULL,
+  `jqgrid_sorttype` varchar(10) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- 表的结构 `tp_setting`
 --
 
@@ -452,6 +469,12 @@ ALTER TABLE `tp_admin_user`
   ADD UNIQUE KEY `username` (`username`);
 
 --
+-- Indexes for table `tp_jqgrid_info`
+--
+ALTER TABLE `tp_jqgrid_info`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tp_setting`
 --
 ALTER TABLE `tp_setting`
@@ -504,6 +527,11 @@ ALTER TABLE `tp_admin_role`
 --
 ALTER TABLE `tp_admin_user`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=204;
+--
+-- AUTO_INCREMENT for table `tp_jqgrid_info`
+--
+ALTER TABLE `tp_jqgrid_info`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tp_setting`
 --
