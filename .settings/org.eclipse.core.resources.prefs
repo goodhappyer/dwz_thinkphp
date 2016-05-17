@@ -1,2 +1,12 @@
 eclipse.preferences.version=1
+encoding//application/common/controller/Backend.php=UTF-8
+encoding//application/common/model/AdminMenu.php=UTF-8
+encoding//framework/library/think/Collection.php=UTF-8
+encoding//framework/library/think/Config.php=UTF-8
+encoding//framework/library/think/Db.php=UTF-8
+encoding//framework/library/think/Model.php=UTF-8
+encoding//framework/library/think/db/Builder.php=UTF-8
+encoding//framework/library/think/db/Connection.php=UTF-8
+encoding//framework/library/think/db/Query.php=UTF-8
+encoding//framework/library/think/db/builder/Mysql.php=UTF-8
 encoding/index.php=UTF-8
