@@ -1,0 +1,1928 @@
+[ 2016-05-18T21:34:33+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.015727s] [吞吐率：63.59req/s] [内存消耗：496.05kb] [文件加载：19]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[error] [10005]module [ index ] not exists [/webscripts/dwz_thinkphp/framework/library/think/App.php:208]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:34:33+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.007534s] [吞吐率：132.73req/s] [内存消耗：362.30kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:35:10+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.018569s] [吞吐率：53.85req/s] [内存消耗：496.80kb] [文件加载：19]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[notice] autoloader error : /webscripts/dwz_thinkphp/application/index/controller/Index.php
+[notice] autoloader error : /webscripts/dwz_thinkphp/application/index/controller/Error.php
+[error] [10001]class [ app\index\controller\Index ] not exists[/webscripts/dwz_thinkphp/framework/library/think/Loader.php:323]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:35:10+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.006317s] [吞吐率：158.30req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:38:10+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.011503s] [吞吐率：86.93req/s] [内存消耗：496.80kb] [文件加载：19]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[notice] autoloader error : /webscripts/dwz_thinkphp/application/index/controller/Index.php
+[notice] autoloader error : /webscripts/dwz_thinkphp/application/index/controller/Error.php
+[error] [10001]class [ app\index\controller\Index ] not exists[/webscripts/dwz_thinkphp/framework/library/think/Loader.php:323]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:38:10+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.006121s] [吞吐率：163.37req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:38:34+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.010457s] [吞吐率：95.63req/s] [内存消耗：496.80kb] [文件加载：19]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[notice] autoloader error : /webscripts/dwz_thinkphp/application/index/controller/Index.php
+[notice] autoloader error : /webscripts/dwz_thinkphp/application/index/controller/Error.php
+[error] [10001]class [ app\index\controller\Index ] not exists[/webscripts/dwz_thinkphp/framework/library/think/Loader.php:323]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:38:35+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.006329s] [吞吐率：158.00req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:40:02+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.014531s] [吞吐率：68.82req/s] [内存消耗：498.32kb] [文件加载：19]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[error] [0]Parse error: syntax error, unexpected 'class' (T_CLASS), expecting '{'[/webscripts/dwz_thinkphp/application/index/controller/Index.php:4]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:40:02+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.007159s] [吞吐率：139.68req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:40:45+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.018060s] [吞吐率：55.37req/s] [内存消耗：450.02kb] [文件加载：17]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[notice] autoloader error : /webscripts/dwz_thinkphp/framework/library/think/response/Html.php
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:40:45+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.011148s] [吞吐率：89.70req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:40:47+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.014610s] [吞吐率：68.45req/s] [内存消耗：450.02kb] [文件加载：17]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[notice] autoloader error : /webscripts/dwz_thinkphp/framework/library/think/response/Html.php
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:40:47+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.006560s] [吞吐率：152.44req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:40:47+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.014724s] [吞吐率：67.92req/s] [内存消耗：450.02kb] [文件加载：17]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[notice] autoloader error : /webscripts/dwz_thinkphp/framework/library/think/response/Html.php
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:40:47+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.006068s] [吞吐率：164.80req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:40:47+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.015387s] [吞吐率：64.99req/s] [内存消耗：450.02kb] [文件加载：17]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[notice] autoloader error : /webscripts/dwz_thinkphp/framework/library/think/response/Html.php
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:40:47+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.005688s] [吞吐率：175.81req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:41:10+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.010786s] [吞吐率：92.71req/s] [内存消耗：450.02kb] [文件加载：17]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[notice] autoloader error : /webscripts/dwz_thinkphp/framework/library/think/response/Html.php
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:41:10+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.007994s] [吞吐率：125.09req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:41:11+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.015691s] [吞吐率：63.73req/s] [内存消耗：450.02kb] [文件加载：17]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[notice] autoloader error : /webscripts/dwz_thinkphp/framework/library/think/response/Html.php
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:41:11+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.011789s] [吞吐率：84.82req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:43:14+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.014825s] [吞吐率：67.45req/s] [内存消耗：450.02kb] [文件加载：17]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[notice] autoloader error : /webscripts/dwz_thinkphp/framework/library/think/response/Html.php
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:43:14+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.008089s] [吞吐率：123.62req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:45:26+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.008946s] [吞吐率：111.78req/s] [内存消耗：450.02kb] [文件加载：17]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[notice] autoloader error : /webscripts/dwz_thinkphp/framework/library/think/response/Html.php
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:45:26+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.006366s] [吞吐率：157.08req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:46:17+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.011430s] [吞吐率：87.49req/s] [内存消耗：831.69kb] [文件加载：24]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[info] [ DB ] INIT mysql:array (
+  'type' => 'mysql',
+  'dsn' => '',
+  'hostname' => '127.0.0.1',
+  'database' => 'dwz_thinkphp',
+  'username' => 'root',
+  'password' => '',
+  'hostport' => '3306',
+  'params' => 
+  array (
+  ),
+  'charset' => 'utf8',
+  'prefix' => 'tp_',
+  'debug' => true,
+  'deploy' => 0,
+  'rw_separate' => false,
+  'master_num' => 1,
+  'slave_no' => '',
+)
+[error] [0]SQLSTATE[HY000] [1049] Unknown database 'dwz_thinkphp'[/webscripts/dwz_thinkphp/framework/library/think/db/Connection.php:271]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:46:17+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.005953s] [吞吐率：167.98req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:47:18+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.016614s] [吞吐率：60.19req/s] [内存消耗：802.22kb] [文件加载：21]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[info] [ DB ] INIT mysql:array (
+  'type' => 'mysql',
+  'dsn' => '',
+  'hostname' => '127.0.0.1',
+  'database' => 'dwz_thinkphp',
+  'username' => 'root',
+  'password' => '',
+  'hostport' => '3306',
+  'params' => 
+  array (
+  ),
+  'charset' => 'utf8',
+  'prefix' => 'tp_',
+  'debug' => true,
+  'deploy' => 0,
+  'rw_separate' => false,
+  'master_num' => 1,
+  'slave_no' => '',
+)
+[info] [ DB ] CONNECT: mysql:dbname=dwz_thinkphp;host=127.0.0.1;port=3306;charset=utf8
+[notice] autoloader error : /webscripts/dwz_thinkphp/framework/library/think/response/Html.php
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:47:18+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.006409s] [吞吐率：156.03req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T21:47:23+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.007391s] [吞吐率：135.30req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T22:04:13+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.016557s] [吞吐率：60.40req/s] [内存消耗：856.74kb] [文件加载：23]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[info] [ DB ] INIT mysql:array (
+  'type' => 'mysql',
+  'dsn' => '',
+  'hostname' => '127.0.0.1',
+  'database' => 'dwz_thinkphp',
+  'username' => 'root',
+  'password' => '',
+  'hostport' => '3306',
+  'params' => 
+  array (
+  ),
+  'charset' => 'utf8',
+  'prefix' => 'tp_',
+  'debug' => true,
+  'deploy' => 0,
+  'rw_separate' => false,
+  'master_num' => 1,
+  'slave_no' => '',
+)
+[info] [ DB ] CONNECT: mysql:dbname=dwz_thinkphp;host=127.0.0.1;port=3306;charset=utf8
+[error] [42S02]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dwz_thinkphp.fields' doesn't exist[/webscripts/dwz_thinkphp/framework/library/think/db/connector/Mysql.php:58]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T22:04:13+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.007187s] [吞吐率：139.14req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T22:04:17+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.013782s] [吞吐率：72.56req/s] [内存消耗：856.74kb] [文件加载：23]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[info] [ DB ] INIT mysql:array (
+  'type' => 'mysql',
+  'dsn' => '',
+  'hostname' => '127.0.0.1',
+  'database' => 'dwz_thinkphp',
+  'username' => 'root',
+  'password' => '',
+  'hostport' => '3306',
+  'params' => 
+  array (
+  ),
+  'charset' => 'utf8',
+  'prefix' => 'tp_',
+  'debug' => true,
+  'deploy' => 0,
+  'rw_separate' => false,
+  'master_num' => 1,
+  'slave_no' => '',
+)
+[info] [ DB ] CONNECT: mysql:dbname=dwz_thinkphp;host=127.0.0.1;port=3306;charset=utf8
+[error] [42S02]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dwz_thinkphp.fields' doesn't exist[/webscripts/dwz_thinkphp/framework/library/think/db/connector/Mysql.php:58]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T22:04:18+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.007903s] [吞吐率：126.54req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T22:04:49+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.012887s] [吞吐率：77.60req/s] [内存消耗：856.74kb] [文件加载：23]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[info] [ DB ] INIT mysql:array (
+  'type' => 'mysql',
+  'dsn' => '',
+  'hostname' => '127.0.0.1',
+  'database' => 'dwz_thinkphp',
+  'username' => 'root',
+  'password' => '',
+  'hostport' => '3306',
+  'params' => 
+  array (
+  ),
+  'charset' => 'utf8',
+  'prefix' => 'tp_',
+  'debug' => true,
+  'deploy' => 0,
+  'rw_separate' => false,
+  'master_num' => 1,
+  'slave_no' => '',
+)
+[info] [ DB ] CONNECT: mysql:dbname=dwz_thinkphp;host=127.0.0.1;port=3306;charset=utf8
+[error] [42S02]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dwz_thinkphp.fields' doesn't exist[/webscripts/dwz_thinkphp/framework/library/think/db/connector/Mysql.php:58]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T22:04:50+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.007173s] [吞吐率：139.42req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T22:05:08+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.010898s] [吞吐率：91.76req/s] [内存消耗：802.22kb] [文件加载：21]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[info] [ DB ] INIT mysql:array (
+  'type' => 'mysql',
+  'dsn' => '',
+  'hostname' => '127.0.0.1',
+  'database' => 'dwz_thinkphp',
+  'username' => 'root',
+  'password' => '',
+  'hostport' => '3306',
+  'params' => 
+  array (
+  ),
+  'charset' => 'utf8',
+  'prefix' => 'tp_',
+  'debug' => true,
+  'deploy' => 0,
+  'rw_separate' => false,
+  'master_num' => 1,
+  'slave_no' => '',
+)
+[info] [ DB ] CONNECT: mysql:dbname=dwz_thinkphp;host=127.0.0.1;port=3306;charset=utf8
+[notice] autoloader error : /webscripts/dwz_thinkphp/framework/library/think/response/Html.php
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T22:05:08+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.006819s] [吞吐率：146.65req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T22:07:17+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.028097s] [吞吐率：35.59req/s] [内存消耗：802.22kb] [文件加载：21]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[info] [ DB ] INIT mysql:array (
+  'type' => 'mysql',
+  'dsn' => '',
+  'hostname' => '127.0.0.1',
+  'database' => 'dwz_thinkphp',
+  'username' => 'root',
+  'password' => '',
+  'hostport' => '3306',
+  'params' => 
+  array (
+  ),
+  'charset' => 'utf8',
+  'prefix' => 'tp_',
+  'debug' => true,
+  'deploy' => 0,
+  'rw_separate' => false,
+  'master_num' => 1,
+  'slave_no' => '',
+)
+[info] [ DB ] CONNECT: mysql:dbname=dwz_thinkphp;host=127.0.0.1;port=3306;charset=utf8
+[notice] autoloader error : /webscripts/dwz_thinkphp/framework/library/think/response/Html.php
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T22:07:17+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.010851s] [吞吐率：92.16req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T22:48:40+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/admin_user/index/menu_id/439
+[log] 127.0.0.1:8083/Admin/admin_user/index/menu_id/439 [运行时间：0.009172s] [吞吐率：109.03req/s] [内存消耗：497.73kb] [文件加载：19]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'admin_user',
+    2 => 'index',
+  ),
+)
+[notice] autoloader error : /webscripts/dwz_thinkphp/application/admin/controller/AdminUser.php
+[notice] autoloader error : /webscripts/dwz_thinkphp/application/admin/controller/Error.php
+[error] [10001]class [ app\admin\controller\AdminUser ] not exists[/webscripts/dwz_thinkphp/framework/library/think/Loader.php:323]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T22:48:40+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.005283s] [吞吐率：189.28req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T22:58:10+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.011293s] [吞吐率：88.55req/s] [内存消耗：509.64kb] [文件加载：21]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[notice] autoloader error : /webscripts/dwz_thinkphp/application/common/model/Exception.php
+[error] [0]Fatal error: Class 'app\common\model\Exception' not found[/webscripts/dwz_thinkphp/application/common/model/JQGrid.php:29]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T22:58:10+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.005976s] [吞吐率：167.34req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T22:59:01+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.016571s] [吞吐率：60.35req/s] [内存消耗：864.04kb] [文件加载：24]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[info] [ DB ] INIT mysql:array (
+  'type' => 'mysql',
+  'dsn' => '',
+  'hostname' => '127.0.0.1',
+  'database' => 'dwz_thinkphp',
+  'username' => 'root',
+  'password' => '',
+  'hostport' => '3306',
+  'params' => 
+  array (
+  ),
+  'charset' => 'utf8',
+  'prefix' => 'tp_',
+  'debug' => true,
+  'deploy' => 0,
+  'rw_separate' => false,
+  'master_num' => 1,
+  'slave_no' => '',
+)
+[info] [ DB ] CONNECT: mysql:dbname=dwz_thinkphp;host=127.0.0.1;port=3306;charset=utf8
+[error] [42S02]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dwz_thinkphp.tp_' doesn't exist[/webscripts/dwz_thinkphp/framework/library/think/db/connector/Mysql.php:58]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T22:59:01+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.005848s] [吞吐率：171.00req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T23:00:21+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.009610s] [吞吐率：104.06req/s] [内存消耗：512.08kb] [文件加载：22]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[error] [8]Use of undefined constant jqgrid_info - assumed 'jqgrid_info'[/webscripts/dwz_thinkphp/application/index/controller/Index.php:10]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T23:00:21+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.006325s] [吞吐率：158.10req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T23:00:50+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.016175s] [吞吐率：61.82req/s] [内存消耗：865.44kb] [文件加载：26]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[info] [ DB ] INIT mysql:array (
+  'type' => 'mysql',
+  'dsn' => '',
+  'hostname' => '127.0.0.1',
+  'database' => 'dwz_thinkphp',
+  'username' => 'root',
+  'password' => '',
+  'hostport' => '3306',
+  'params' => 
+  array (
+  ),
+  'charset' => 'utf8',
+  'prefix' => 'tp_',
+  'debug' => true,
+  'deploy' => 0,
+  'rw_separate' => false,
+  'master_num' => 1,
+  'slave_no' => '',
+)
+[info] [ DB ] CONNECT: mysql:dbname=dwz_thinkphp;host=127.0.0.1;port=3306;charset=utf8
+[error] [2]Illegal string offset 'fields'[/webscripts/dwz_thinkphp/application/common/model/JQGrid.php:43]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T23:00:50+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.008008s] [吞吐率：124.88req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T23:02:22+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.017929s] [吞吐率：55.78req/s] [内存消耗：1,028.09kb] [文件加载：29]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[info] [ DB ] INIT mysql:array (
+  'type' => 'mysql',
+  'dsn' => '',
+  'hostname' => '127.0.0.1',
+  'database' => 'dwz_thinkphp',
+  'username' => 'root',
+  'password' => '',
+  'hostport' => '3306',
+  'params' => 
+  array (
+  ),
+  'charset' => 'utf8',
+  'prefix' => 'tp_',
+  'debug' => true,
+  'deploy' => 0,
+  'rw_separate' => false,
+  'master_num' => 1,
+  'slave_no' => '',
+)
+[info] [ DB ] CONNECT: mysql:dbname=dwz_thinkphp;host=127.0.0.1;port=3306;charset=utf8
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'id' LIMIT 1   [ RunTime:0.000349s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => NULL,
+  'type' => NULL,
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => NULL,
+  'extra' => 'Impossible WHERE noticed after reading const tables',
+) ]
+[error] [8]Undefined property: app\common\model\JQGrid::$id[/webscripts/dwz_thinkphp/application/common/model/JQGrid.php:44]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T23:02:22+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.006746s] [吞吐率：148.23req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T23:03:29+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.019383s] [吞吐率：51.59req/s] [内存消耗：1,028.09kb] [文件加载：29]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[info] [ DB ] INIT mysql:array (
+  'type' => 'mysql',
+  'dsn' => '',
+  'hostname' => '127.0.0.1',
+  'database' => 'dwz_thinkphp',
+  'username' => 'root',
+  'password' => '',
+  'hostport' => '3306',
+  'params' => 
+  array (
+  ),
+  'charset' => 'utf8',
+  'prefix' => 'tp_',
+  'debug' => true,
+  'deploy' => 0,
+  'rw_separate' => false,
+  'master_num' => 1,
+  'slave_no' => '',
+)
+[info] [ DB ] CONNECT: mysql:dbname=dwz_thinkphp;host=127.0.0.1;port=3306;charset=utf8
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'id' LIMIT 1   [ RunTime:0.000465s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => NULL,
+  'type' => NULL,
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => NULL,
+  'extra' => 'Impossible WHERE noticed after reading const tables',
+) ]
+[error] [8]Undefined property: app\common\model\JQGrid::$id[/webscripts/dwz_thinkphp/application/common/model/JQGrid.php:44]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T23:03:29+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.006639s] [吞吐率：150.63req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T23:03:54+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.014617s] [吞吐率：68.41req/s] [内存消耗：1,028.04kb] [文件加载：29]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[info] [ DB ] INIT mysql:array (
+  'type' => 'mysql',
+  'dsn' => '',
+  'hostname' => '127.0.0.1',
+  'database' => 'dwz_thinkphp',
+  'username' => 'root',
+  'password' => '',
+  'hostport' => '3306',
+  'params' => 
+  array (
+  ),
+  'charset' => 'utf8',
+  'prefix' => 'tp_',
+  'debug' => true,
+  'deploy' => 0,
+  'rw_separate' => false,
+  'master_num' => 1,
+  'slave_no' => '',
+)
+[info] [ DB ] CONNECT: mysql:dbname=dwz_thinkphp;host=127.0.0.1;port=3306;charset=utf8
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'id' LIMIT 1   [ RunTime:0.000547s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => NULL,
+  'type' => NULL,
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => NULL,
+  'extra' => 'Impossible WHERE noticed after reading const tables',
+) ]
+[error] [8]Undefined offset: 0[/webscripts/dwz_thinkphp/application/common/model/JQGrid.php:48]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T23:03:54+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.007046s] [吞吐率：141.92req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T23:04:44+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.015942s] [吞吐率：62.73req/s] [内存消耗：1,028.34kb] [文件加载：29]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[info] [ DB ] INIT mysql:array (
+  'type' => 'mysql',
+  'dsn' => '',
+  'hostname' => '127.0.0.1',
+  'database' => 'dwz_thinkphp',
+  'username' => 'root',
+  'password' => '',
+  'hostport' => '3306',
+  'params' => 
+  array (
+  ),
+  'charset' => 'utf8',
+  'prefix' => 'tp_',
+  'debug' => true,
+  'deploy' => 0,
+  'rw_separate' => false,
+  'master_num' => 1,
+  'slave_no' => '',
+)
+[info] [ DB ] CONNECT: mysql:dbname=dwz_thinkphp;host=127.0.0.1;port=3306;charset=utf8
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'id' LIMIT 1   [ RunTime:0.000348s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => NULL,
+  'type' => NULL,
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => NULL,
+  'extra' => 'Impossible WHERE noticed after reading const tables',
+) ]
+[error] [8]Undefined offset: 0[/webscripts/dwz_thinkphp/application/common/model/JQGrid.php:49]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T23:04:44+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.005996s] [吞吐率：166.78req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T23:04:52+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.006817s] [吞吐率：146.70req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T23:05:30+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.042589s] [吞吐率：23.48req/s] [内存消耗：953.92kb] [文件加载：25]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[info] [ DB ] INIT mysql:array (
+  'type' => 'mysql',
+  'dsn' => '',
+  'hostname' => '127.0.0.1',
+  'database' => 'dwz_thinkphp',
+  'username' => 'root',
+  'password' => '',
+  'hostport' => '3306',
+  'params' => 
+  array (
+  ),
+  'charset' => 'utf8',
+  'prefix' => 'tp_',
+  'debug' => true,
+  'deploy' => 0,
+  'rw_separate' => false,
+  'master_num' => 1,
+  'slave_no' => '',
+)
+[info] [ DB ] CONNECT: mysql:dbname=dwz_thinkphp;host=127.0.0.1;port=3306;charset=utf8
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'id' LIMIT 1   [ RunTime:0.000728s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => NULL,
+  'type' => NULL,
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => NULL,
+  'extra' => 'Impossible WHERE noticed after reading const tables',
+) ]
+[sql] [ SQL ] INSERT INTO `tp_jqgrid_info` (`table_name` , `field_name` , `jqgrid_name` , `jqgrid_index` , `jqgrid_width` , `jqgrid_align`) VALUES ('jqgrid_info' , 'id' , 'id' , 'id' , '50' , 'right')        [ RunTime:0.000585s ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'table_name' LIMIT 1   [ RunTime:0.000545s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => NULL,
+  'type' => NULL,
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => NULL,
+  'extra' => 'Impossible WHERE noticed after reading const tables',
+) ]
+[sql] [ SQL ] INSERT INTO `tp_jqgrid_info` (`table_name` , `field_name` , `jqgrid_name` , `jqgrid_index` , `jqgrid_width` , `jqgrid_align`) VALUES ('jqgrid_info' , 'table_name' , 'table_name' , 'table_name' , '11' , 'left')        [ RunTime:0.000606s ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'field_name' LIMIT 1   [ RunTime:0.000469s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => 'tp_jqgrid_info',
+  'type' => 'ALL',
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => 2,
+  'extra' => 'Using where',
+) ]
+[sql] [ SQL ] INSERT INTO `tp_jqgrid_info` (`table_name` , `field_name` , `jqgrid_name` , `jqgrid_index` , `jqgrid_width` , `jqgrid_align`) VALUES ('jqgrid_info' , 'field_name' , 'field_name' , 'field_name' , '11' , 'left')        [ RunTime:0.000434s ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'jqgrid_name' LIMIT 1   [ RunTime:0.000442s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => 'tp_jqgrid_info',
+  'type' => 'ALL',
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => 3,
+  'extra' => 'Using where',
+) ]
+[sql] [ SQL ] INSERT INTO `tp_jqgrid_info` (`table_name` , `field_name` , `jqgrid_name` , `jqgrid_index` , `jqgrid_width` , `jqgrid_align`) VALUES ('jqgrid_info' , 'jqgrid_name' , 'jqgrid_name' , 'jqgrid_name' , '11' , 'left')        [ RunTime:0.000331s ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'jqgrid_index' LIMIT 1   [ RunTime:0.000313s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => 'tp_jqgrid_info',
+  'type' => 'ALL',
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => 4,
+  'extra' => 'Using where',
+) ]
+[sql] [ SQL ] INSERT INTO `tp_jqgrid_info` (`table_name` , `field_name` , `jqgrid_name` , `jqgrid_index` , `jqgrid_width` , `jqgrid_align`) VALUES ('jqgrid_info' , 'jqgrid_index' , 'jqgrid_index' , 'jqgrid_index' , '11' , 'left')        [ RunTime:0.000274s ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'jqgrid_width' LIMIT 1   [ RunTime:0.000289s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => 'tp_jqgrid_info',
+  'type' => 'ALL',
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => 5,
+  'extra' => 'Using where',
+) ]
+[sql] [ SQL ] INSERT INTO `tp_jqgrid_info` (`table_name` , `field_name` , `jqgrid_name` , `jqgrid_index` , `jqgrid_width` , `jqgrid_align`) VALUES ('jqgrid_info' , 'jqgrid_width' , 'jqgrid_width' , 'jqgrid_width' , '50' , 'right')        [ RunTime:0.000294s ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'jqgrid_align' LIMIT 1   [ RunTime:0.000393s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => 'tp_jqgrid_info',
+  'type' => 'ALL',
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => 6,
+  'extra' => 'Using where',
+) ]
+[sql] [ SQL ] INSERT INTO `tp_jqgrid_info` (`table_name` , `field_name` , `jqgrid_name` , `jqgrid_index` , `jqgrid_width` , `jqgrid_align`) VALUES ('jqgrid_info' , 'jqgrid_align' , 'jqgrid_align' , 'jqgrid_align' , '11' , 'left')        [ RunTime:0.000287s ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'jqgrid_sorttype' LIMIT 1   [ RunTime:0.000335s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => 'tp_jqgrid_info',
+  'type' => 'ALL',
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => 7,
+  'extra' => 'Using where',
+) ]
+[sql] [ SQL ] INSERT INTO `tp_jqgrid_info` (`table_name` , `field_name` , `jqgrid_name` , `jqgrid_index` , `jqgrid_width` , `jqgrid_align`) VALUES ('jqgrid_info' , 'jqgrid_sorttype' , 'jqgrid_sorttype' , 'jqgrid_sorttype' , '11' , 'left')        [ RunTime:0.000342s ]
+[notice] autoloader error : /webscripts/dwz_thinkphp/framework/library/think/response/Html.php
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T23:05:30+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.007752s] [吞吐率：129.00req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T23:05:34+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.019742s] [吞吐率：50.65req/s] [内存消耗：986.10kb] [文件加载：25]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[info] [ DB ] INIT mysql:array (
+  'type' => 'mysql',
+  'dsn' => '',
+  'hostname' => '127.0.0.1',
+  'database' => 'dwz_thinkphp',
+  'username' => 'root',
+  'password' => '',
+  'hostport' => '3306',
+  'params' => 
+  array (
+  ),
+  'charset' => 'utf8',
+  'prefix' => 'tp_',
+  'debug' => true,
+  'deploy' => 0,
+  'rw_separate' => false,
+  'master_num' => 1,
+  'slave_no' => '',
+)
+[info] [ DB ] CONNECT: mysql:dbname=dwz_thinkphp;host=127.0.0.1;port=3306;charset=utf8
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'id' LIMIT 1   [ RunTime:0.000420s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => 'tp_jqgrid_info',
+  'type' => 'ALL',
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => 8,
+  'extra' => 'Using where',
+) ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'table_name' LIMIT 1   [ RunTime:0.000251s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => 'tp_jqgrid_info',
+  'type' => 'ALL',
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => 8,
+  'extra' => 'Using where',
+) ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'field_name' LIMIT 1   [ RunTime:0.000218s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => 'tp_jqgrid_info',
+  'type' => 'ALL',
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => 8,
+  'extra' => 'Using where',
+) ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'jqgrid_name' LIMIT 1   [ RunTime:0.000334s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => 'tp_jqgrid_info',
+  'type' => 'ALL',
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => 8,
+  'extra' => 'Using where',
+) ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'jqgrid_index' LIMIT 1   [ RunTime:0.000163s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => 'tp_jqgrid_info',
+  'type' => 'ALL',
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => 8,
+  'extra' => 'Using where',
+) ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'jqgrid_width' LIMIT 1   [ RunTime:0.000157s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => 'tp_jqgrid_info',
+  'type' => 'ALL',
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => 8,
+  'extra' => 'Using where',
+) ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'jqgrid_align' LIMIT 1   [ RunTime:0.000155s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => 'tp_jqgrid_info',
+  'type' => 'ALL',
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => 8,
+  'extra' => 'Using where',
+) ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'jqgrid_sorttype' LIMIT 1   [ RunTime:0.000155s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => 'tp_jqgrid_info',
+  'type' => 'ALL',
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => 8,
+  'extra' => 'Using where',
+) ]
+[notice] autoloader error : /webscripts/dwz_thinkphp/framework/library/think/response/Html.php
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T23:05:34+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.007071s] [吞吐率：141.42req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T23:08:24+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.016086s] [吞吐率：62.17req/s] [内存消耗：1,026.82kb] [文件加载：28]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[info] [ DB ] INIT mysql:array (
+  'type' => 'mysql',
+  'dsn' => '',
+  'hostname' => '127.0.0.1',
+  'database' => 'dwz_thinkphp',
+  'username' => 'root',
+  'password' => '',
+  'hostport' => '3306',
+  'params' => 
+  array (
+  ),
+  'charset' => 'utf8',
+  'prefix' => 'tp_',
+  'debug' => true,
+  'deploy' => 0,
+  'rw_separate' => false,
+  'master_num' => 1,
+  'slave_no' => '',
+)
+[info] [ DB ] CONNECT: mysql:dbname=dwz_thinkphp;host=127.0.0.1;port=3306;charset=utf8
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'id' LIMIT 1   [ RunTime:0.000356s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => NULL,
+  'type' => NULL,
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => NULL,
+  'extra' => 'Impossible WHERE noticed after reading const tables',
+) ]
+[notice] autoloader error : /webscripts/dwz_thinkphp/application/common/model/PDO.php
+[error] [0]Fatal error: Class 'app\common\model\PDO' not found[/webscripts/dwz_thinkphp/application/common/model/JQGrid.php:49]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T23:08:25+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.005993s] [吞吐率：166.86req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T23:09:08+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.025242s] [吞吐率：39.62req/s] [内存消耗：953.98kb] [文件加载：25]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[info] [ DB ] INIT mysql:array (
+  'type' => 'mysql',
+  'dsn' => '',
+  'hostname' => '127.0.0.1',
+  'database' => 'dwz_thinkphp',
+  'username' => 'root',
+  'password' => '',
+  'hostport' => '3306',
+  'params' => 
+  array (
+  ),
+  'charset' => 'utf8',
+  'prefix' => 'tp_',
+  'debug' => true,
+  'deploy' => 0,
+  'rw_separate' => false,
+  'master_num' => 1,
+  'slave_no' => '',
+)
+[info] [ DB ] CONNECT: mysql:dbname=dwz_thinkphp;host=127.0.0.1;port=3306;charset=utf8
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'id' LIMIT 1   [ RunTime:0.000433s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => NULL,
+  'type' => NULL,
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => NULL,
+  'extra' => 'Impossible WHERE noticed after reading const tables',
+) ]
+[sql] [ SQL ] INSERT INTO `tp_jqgrid_info` (`table_name` , `field_name` , `jqgrid_name` , `jqgrid_index` , `jqgrid_width` , `jqgrid_align`) VALUES ('jqgrid_info' , 'id' , 'id' , 'id' , '11' , 'left')        [ RunTime:0.000330s ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'table_name' LIMIT 1   [ RunTime:0.000778s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => NULL,
+  'type' => NULL,
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => NULL,
+  'extra' => 'Impossible WHERE noticed after reading const tables',
+) ]
+[sql] [ SQL ] INSERT INTO `tp_jqgrid_info` (`table_name` , `field_name` , `jqgrid_name` , `jqgrid_index` , `jqgrid_width` , `jqgrid_align`) VALUES ('jqgrid_info' , 'table_name' , 'table_name' , 'table_name' , '50' , 'right')        [ RunTime:0.000243s ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'field_name' LIMIT 1   [ RunTime:0.000236s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => 'tp_jqgrid_info',
+  'type' => 'ALL',
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => 2,
+  'extra' => 'Using where',
+) ]
+[sql] [ SQL ] INSERT INTO `tp_jqgrid_info` (`table_name` , `field_name` , `jqgrid_name` , `jqgrid_index` , `jqgrid_width` , `jqgrid_align`) VALUES ('jqgrid_info' , 'field_name' , 'field_name' , 'field_name' , '50' , 'right')        [ RunTime:0.000198s ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'jqgrid_name' LIMIT 1   [ RunTime:0.000220s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => 'tp_jqgrid_info',
+  'type' => 'ALL',
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => 3,
+  'extra' => 'Using where',
+) ]
+[sql] [ SQL ] INSERT INTO `tp_jqgrid_info` (`table_name` , `field_name` , `jqgrid_name` , `jqgrid_index` , `jqgrid_width` , `jqgrid_align`) VALUES ('jqgrid_info' , 'jqgrid_name' , 'jqgrid_name' , 'jqgrid_name' , '50' , 'right')        [ RunTime:0.000207s ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'jqgrid_index' LIMIT 1   [ RunTime:0.000222s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => 'tp_jqgrid_info',
+  'type' => 'ALL',
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => 4,
+  'extra' => 'Using where',
+) ]
+[sql] [ SQL ] INSERT INTO `tp_jqgrid_info` (`table_name` , `field_name` , `jqgrid_name` , `jqgrid_index` , `jqgrid_width` , `jqgrid_align`) VALUES ('jqgrid_info' , 'jqgrid_index' , 'jqgrid_index' , 'jqgrid_index' , '50' , 'right')        [ RunTime:0.000204s ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'jqgrid_width' LIMIT 1   [ RunTime:0.000199s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => 'tp_jqgrid_info',
+  'type' => 'ALL',
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => 5,
+  'extra' => 'Using where',
+) ]
+[sql] [ SQL ] INSERT INTO `tp_jqgrid_info` (`table_name` , `field_name` , `jqgrid_name` , `jqgrid_index` , `jqgrid_width` , `jqgrid_align`) VALUES ('jqgrid_info' , 'jqgrid_width' , 'jqgrid_width' , 'jqgrid_width' , '11' , 'left')        [ RunTime:0.000159s ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'jqgrid_align' LIMIT 1   [ RunTime:0.000177s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => 'tp_jqgrid_info',
+  'type' => 'ALL',
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => 6,
+  'extra' => 'Using where',
+) ]
+[sql] [ SQL ] INSERT INTO `tp_jqgrid_info` (`table_name` , `field_name` , `jqgrid_name` , `jqgrid_index` , `jqgrid_width` , `jqgrid_align`) VALUES ('jqgrid_info' , 'jqgrid_align' , 'jqgrid_align' , 'jqgrid_align' , '50' , 'right')        [ RunTime:0.000151s ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'jqgrid_sorttype' LIMIT 1   [ RunTime:0.000165s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => 'tp_jqgrid_info',
+  'type' => 'ALL',
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => 7,
+  'extra' => 'Using where',
+) ]
+[sql] [ SQL ] INSERT INTO `tp_jqgrid_info` (`table_name` , `field_name` , `jqgrid_name` , `jqgrid_index` , `jqgrid_width` , `jqgrid_align`) VALUES ('jqgrid_info' , 'jqgrid_sorttype' , 'jqgrid_sorttype' , 'jqgrid_sorttype' , '50' , 'right')        [ RunTime:0.000250s ]
+[notice] autoloader error : /webscripts/dwz_thinkphp/framework/library/think/response/Html.php
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T23:09:08+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.007928s] [吞吐率：126.14req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T23:11:28+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.017554s] [吞吐率：56.97req/s] [内存消耗：1,027.42kb] [文件加载：28]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[info] [ DB ] INIT mysql:array (
+  'type' => 'mysql',
+  'dsn' => '',
+  'hostname' => '127.0.0.1',
+  'database' => 'dwz_thinkphp',
+  'username' => 'root',
+  'password' => '',
+  'hostport' => '3306',
+  'params' => 
+  array (
+  ),
+  'charset' => 'utf8',
+  'prefix' => 'tp_',
+  'debug' => true,
+  'deploy' => 0,
+  'rw_separate' => false,
+  'master_num' => 1,
+  'slave_no' => '',
+)
+[info] [ DB ] CONNECT: mysql:dbname=dwz_thinkphp;host=127.0.0.1;port=3306;charset=utf8
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'id' LIMIT 1   [ RunTime:0.000563s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => NULL,
+  'type' => NULL,
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => NULL,
+  'extra' => 'Impossible WHERE noticed after reading const tables',
+) ]
+[error] [0] fields not exists :[sorttype][/webscripts/dwz_thinkphp/framework/library/think/db/Builder.php:95]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T23:11:28+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.006759s] [吞吐率：147.95req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T23:12:25+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[log] 127.0.0.1:8083/ [运行时间：0.022370s] [吞吐率：44.70req/s] [内存消耗：955.42kb] [文件加载：25]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[info] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[info] [ RUN ] /webscripts/dwz_thinkphp/application/index/controller/Index.php[ array (
+) ]
+[info] [ DB ] INIT mysql:array (
+  'type' => 'mysql',
+  'dsn' => '',
+  'hostname' => '127.0.0.1',
+  'database' => 'dwz_thinkphp',
+  'username' => 'root',
+  'password' => '',
+  'hostport' => '3306',
+  'params' => 
+  array (
+  ),
+  'charset' => 'utf8',
+  'prefix' => 'tp_',
+  'debug' => true,
+  'deploy' => 0,
+  'rw_separate' => false,
+  'master_num' => 1,
+  'slave_no' => '',
+)
+[info] [ DB ] CONNECT: mysql:dbname=dwz_thinkphp;host=127.0.0.1;port=3306;charset=utf8
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'id' LIMIT 1   [ RunTime:0.000275s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => NULL,
+  'type' => NULL,
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => NULL,
+  'extra' => 'Impossible WHERE noticed after reading const tables',
+) ]
+[sql] [ SQL ] INSERT INTO `tp_jqgrid_info` (`table_name` , `field_name` , `jqgrid_name` , `jqgrid_index` , `jqgrid_width` , `jqgrid_align` , `jqgrid_sorttype`) VALUES ('jqgrid_info' , 'id' , 'id' , 'id' , '11' , 'left' , 'int')         [ RunTime:0.000282s ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'table_name' LIMIT 1   [ RunTime:0.000207s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => NULL,
+  'type' => NULL,
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => NULL,
+  'extra' => 'Impossible WHERE noticed after reading const tables',
+) ]
+[sql] [ SQL ] INSERT INTO `tp_jqgrid_info` (`table_name` , `field_name` , `jqgrid_name` , `jqgrid_index` , `jqgrid_width` , `jqgrid_align` , `jqgrid_sorttype`) VALUES ('jqgrid_info' , 'table_name' , 'table_name' , 'table_name' , '50' , 'right' , '')         [ RunTime:0.000181s ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'field_name' LIMIT 1   [ RunTime:0.000248s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => 'tp_jqgrid_info',
+  'type' => 'ALL',
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => 2,
+  'extra' => 'Using where',
+) ]
+[sql] [ SQL ] INSERT INTO `tp_jqgrid_info` (`table_name` , `field_name` , `jqgrid_name` , `jqgrid_index` , `jqgrid_width` , `jqgrid_align` , `jqgrid_sorttype`) VALUES ('jqgrid_info' , 'field_name' , 'field_name' , 'field_name' , '50' , 'right' , '')         [ RunTime:0.000717s ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'jqgrid_name' LIMIT 1   [ RunTime:0.000328s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => 'tp_jqgrid_info',
+  'type' => 'ALL',
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => 3,
+  'extra' => 'Using where',
+) ]
+[sql] [ SQL ] INSERT INTO `tp_jqgrid_info` (`table_name` , `field_name` , `jqgrid_name` , `jqgrid_index` , `jqgrid_width` , `jqgrid_align` , `jqgrid_sorttype`) VALUES ('jqgrid_info' , 'jqgrid_name' , 'jqgrid_name' , 'jqgrid_name' , '50' , 'right' , '')         [ RunTime:0.000283s ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'jqgrid_index' LIMIT 1   [ RunTime:0.000637s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => 'tp_jqgrid_info',
+  'type' => 'ALL',
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => 4,
+  'extra' => 'Using where',
+) ]
+[sql] [ SQL ] INSERT INTO `tp_jqgrid_info` (`table_name` , `field_name` , `jqgrid_name` , `jqgrid_index` , `jqgrid_width` , `jqgrid_align` , `jqgrid_sorttype`) VALUES ('jqgrid_info' , 'jqgrid_index' , 'jqgrid_index' , 'jqgrid_index' , '50' , 'right' , '')         [ RunTime:0.000297s ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'jqgrid_width' LIMIT 1   [ RunTime:0.000245s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => 'tp_jqgrid_info',
+  'type' => 'ALL',
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => 5,
+  'extra' => 'Using where',
+) ]
+[sql] [ SQL ] INSERT INTO `tp_jqgrid_info` (`table_name` , `field_name` , `jqgrid_name` , `jqgrid_index` , `jqgrid_width` , `jqgrid_align` , `jqgrid_sorttype`) VALUES ('jqgrid_info' , 'jqgrid_width' , 'jqgrid_width' , 'jqgrid_width' , '11' , 'left' , 'int')         [ RunTime:0.000178s ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'jqgrid_align' LIMIT 1   [ RunTime:0.000177s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => 'tp_jqgrid_info',
+  'type' => 'ALL',
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => 6,
+  'extra' => 'Using where',
+) ]
+[sql] [ SQL ] INSERT INTO `tp_jqgrid_info` (`table_name` , `field_name` , `jqgrid_name` , `jqgrid_index` , `jqgrid_width` , `jqgrid_align` , `jqgrid_sorttype`) VALUES ('jqgrid_info' , 'jqgrid_align' , 'jqgrid_align' , 'jqgrid_align' , '50' , 'right' , '')         [ RunTime:0.000183s ]
+[sql] [ SQL ] SELECT * FROM `tp_jqgrid_info` WHERE  `table_name` = 'jqgrid_info'  AND `field_name` = 'jqgrid_sorttype' LIMIT 1   [ RunTime:0.000174s ]
+[sql] [ EXPLAIN : array (
+  'id' => 1,
+  'select_type' => 'SIMPLE',
+  'table' => 'tp_jqgrid_info',
+  'type' => 'ALL',
+  'possible_keys' => NULL,
+  'key' => NULL,
+  'key_len' => NULL,
+  'ref' => NULL,
+  'rows' => 7,
+  'extra' => 'Using where',
+) ]
+[sql] [ SQL ] INSERT INTO `tp_jqgrid_info` (`table_name` , `field_name` , `jqgrid_name` , `jqgrid_index` , `jqgrid_width` , `jqgrid_align` , `jqgrid_sorttype`) VALUES ('jqgrid_info' , 'jqgrid_sorttype' , 'jqgrid_sorttype' , 'jqgrid_sorttype' , '50' , 'right' , '')         [ RunTime:0.000155s ]
+[notice] autoloader error : /webscripts/dwz_thinkphp/framework/library/think/response/Html.php
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
+[ 2016-05-18T23:12:25+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[log] 127.0.0.1:8083/favicon.ico [运行时间：0.007813s] [吞吐率：127.99req/s] [内存消耗：361.62kb] [文件加载：18]
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/framework/convention.php
+[info] [ CONFIG ] /webscripts/dwz_thinkphp/application/database.php
+[error] [0]url suffix deny[/webscripts/dwz_thinkphp/framework/library/think/App.php:321]
+[info] [ LOG ] INIT File: array (
+  'path' => '/webscripts/dwz_thinkphp/runtime/log/',
+)
+
