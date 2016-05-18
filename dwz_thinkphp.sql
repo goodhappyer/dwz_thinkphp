@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 2016-05-17 16:04:00
--- 服务器版本： 5.5.47-MariaDB
--- PHP Version: 5.4.16
+-- Generation Time: 2016-05-18 15:47:32
+-- 服务器版本： 10.1.13-MariaDB
+-- PHP Version: 7.0.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -331,7 +331,21 @@ CREATE TABLE IF NOT EXISTS `tp_jqgrid_info` (
   `jqgrid_width` int(11) NOT NULL,
   `jqgrid_align` varchar(10) NOT NULL,
   `jqgrid_sorttype` varchar(10) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `tp_jqgrid_info`
+--
+
+INSERT INTO `tp_jqgrid_info` (`id`, `table_name`, `field_name`, `jqgrid_name`, `jqgrid_index`, `jqgrid_width`, `jqgrid_align`, `jqgrid_sorttype`) VALUES
+(24, 'jqgrid_info', 'jqgrid_sorttype', 'jqgrid_sorttype', 'jqgrid_sorttype', 50, 'right', ''),
+(22, 'jqgrid_info', 'jqgrid_width', 'jqgrid_width', 'jqgrid_width', 11, 'left', 'int'),
+(23, 'jqgrid_info', 'jqgrid_align', 'jqgrid_align', 'jqgrid_align', 50, 'right', ''),
+(21, 'jqgrid_info', 'jqgrid_index', 'jqgrid_index', 'jqgrid_index', 50, 'right', ''),
+(20, 'jqgrid_info', 'jqgrid_name', 'jqgrid_name', 'jqgrid_name', 50, 'right', ''),
+(18, 'jqgrid_info', 'table_name', 'table_name', 'table_name', 50, 'right', ''),
+(19, 'jqgrid_info', 'field_name', 'field_name', 'field_name', 50, 'right', ''),
+(17, 'jqgrid_info', 'id', 'id', 'id', 11, 'left', 'int');
 
 -- --------------------------------------------------------
 
@@ -531,7 +545,7 @@ ALTER TABLE `tp_admin_user`
 -- AUTO_INCREMENT for table `tp_jqgrid_info`
 --
 ALTER TABLE `tp_jqgrid_info`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT for table `tp_setting`
 --
