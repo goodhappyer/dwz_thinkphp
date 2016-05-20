@@ -1,4 +1,3 @@
 eclipse.preferences.version=1
-include_path=0;/dwz_thinkphp
-phpVersion=php7.0
-use_asp_tags_as_php=false
+phpVersion=php5.6
+useShortTags=true
