@@ -25,7 +25,7 @@ class JQGrid {
 			$this->$k = $v;
 		}
 		if ($this->debug) {
-			// 正式板就不运行
+			// 開發時開啓debug
 			$tableinfo = Db::name ( $this->table_name )->getTableInfo ();
 			foreach ( $tableinfo ['fields'] as $k => $v ) {
 				if (! Db::name ( $this->jqgrid_talbe )->where ( "table_name", $this->table_name )->where ( "field_name", $v )->find ()) {
@@ -61,18 +61,33 @@ class JQGrid {
 		}
 		if (empty ( $this->pager_id )) {
 			$this->table_id = "pager_" . $this->table_name;
+		}	
+		$cols=Db::name ( $this->jqgrid_talbe )->where ( "table_name", $this->table_name )->select ();
+		$colNames=[];
+		$colMode=[];
+		foreach($clos as $v)	
+		{
+			$colNames[]=$v['jqgrid_name'];	
+			$col=[];
+			$col['name']=$v['field_name'];
+			$col['index']=$v['jqgrid_index'];
+			$col['width']=$v['jqgrid_width'];
+			$col['align']=$v['jqgrid_align'];
+			$col['sorttype']=$v['jqgrid_sorttype'];
+			$colMode[]=$col;
 		}
-		
-		Db::name ( $this->jqgrid_talbe )->where ( "table_name", $this->table_name )->select ();
-		
 		$d=array();
 		$d['datatype']=$this->js_jqg_datatype;
 		$d['height']=$this->js_jqg_height;
-		$d['colNames']="";
+		$d['colNames']=$this->js_jqg_colNames;
+		$d['colModel']=$this->js_jqg_colModel;
+		$d['multiselect']=$this->js_jqg_multiselect;
+		$d['caption']=$this->js_jqg_caption;
 		echo '$(function(){'.$this->js_init_function.'();});';
 		echo 'function '.$this->js_init_function.'(){';
-		
-		$d[''];
+			echo 'jQuery("#'.$this->table_id.'").jqGrid(';
+				echo json_encode($d);
+			echo ')';
 		echo '}';
 	}
 }

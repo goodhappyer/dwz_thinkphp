@@ -30,9 +30,9 @@ function pageInit()
 {
 	jQuery("#list2").jqGrid(
 	{
-		datatype : "local",
+		"datatype" : "local",
 		height : 250,
-		colNames : [ 'Inv No', 'Date', 'Client', 'Amount', 'Tax','Total', 'Notes' ],
+		"colNames" : [ 'Inv No', 'Date', 'Client', 'Amount', 'Tax','Total', 'Notes' ],
 		colModel : 
 			[
 				{name : 'id',index : 'id',width : 60,sorttype : "int"},
