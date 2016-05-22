@@ -5,7 +5,7 @@
  * If mb_* functions don't exist, we create the ones we need and they'll use the
  * standard string functions.
  *
- * All mb_* functions created by pMA should behave as mb_* functions.
+ * All mb_* functions created by PMA should behave as mb_* functions.
  *
  * @package PhpMyAdmin
  */
@@ -14,8 +14,6 @@ if (! defined('PHPMYADMIN')) {
 }
 
 if (!@function_exists('mb_ord')) {
-    mb_internal_encoding('utf-8');
-
     /**
      * Perform a regular expression match
      *

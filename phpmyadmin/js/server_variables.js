@@ -30,7 +30,15 @@ AJAX.registerOnload('server_variables.js', function () {
     $filterField.keyup(function () {
         var textFilter = null, val = $(this).val();
         if (val.length !== 0) {
-            textFilter = new RegExp("(^| )" + val.replace(/_/g, ' '), 'i');
+            try {
+                textFilter = new RegExp("(^| )" + val.replace(/_/g, ' '), 'i');
+                $(this).removeClass('error');
+            } catch(e) {
+                if (e instanceof SyntaxError) {
+                    $(this).addClass('error');
+                    textFilter = null;
+                }
+            }
         }
         filterVariables(textFilter);
     });
@@ -43,7 +51,7 @@ AJAX.registerOnload('server_variables.js', function () {
     /* Filters the rows by the user given regexp */
     function filterVariables(textFilter) {
         var mark_next = false, $row, odd_row = false;
-        $('#serverVariables .var-row').not('.var-header').each(function () {
+        $('#serverVariables').find('.var-row').not('.var-header').each(function () {
             $row = $(this);
             if (mark_next || textFilter === null ||
                 textFilter.exec($row.find('.var-name').text())
@@ -80,7 +88,7 @@ AJAX.registerOnload('server_variables.js', function () {
 
         $mySaveLink.click(function () {
             var $msgbox = PMA_ajaxShowMessage(PMA_messages.strProcessingRequest);
-            $.get($(this).attr('href'), {
+            $.post($(this).attr('href'), {
                     ajax_request: true,
                     type: 'setval',
                     varName: varName,

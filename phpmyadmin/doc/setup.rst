@@ -87,6 +87,104 @@ which include phpMyAdmin together with a database and web server such as
 You can find more of such options at `Wikipedia <https://en.wikipedia.org/wiki/List_of_AMP_packages>`_.
 
 
+Installing using Composer
++++++++++++++++++++++++++
+
+You can install phpMyAdmin using `Composer <https://getcomposer.org/>`_,
+however it's currently not available in the default
+`Packagist <https://packagist.org/>`_ repository due to its technical
+limitations.
+
+The installation is possible by adding our own repository
+<https://www.phpmyadmin.net/packages.json>:
+
+.. code-block:: sh
+
+    composer create-project phpmyadmin/phpmyadmin --repository-url=https://www.phpmyadmin.net/packages.json --no-dev
+
+Installing using Docker
++++++++++++++++++++++++
+
+phpMyAdmin comes with a Docker image, which you can easily deploy. You can
+download it using:
+
+.. code-block:: sh
+
+    docker pull phpmyadmin/phpmyadmin
+
+The phpMyAdmin server will be executed on port 80. It supports several ways of
+configuring the link to the database server, which you can manage using
+environment variables:
+
+.. envvar:: PMA_ARBITRARY
+
+    Allows you to enter database server hostname on login form (see
+    :config:option:`$cfg['AllowArbitraryServer']`).
+
+.. envvar:: PMA_HOST
+    
+    Host name or IP address of the database server to use.
+
+.. envvar:: PMA_HOSTS
+    
+    Comma separated host names or IP addresses of the database servers to use.
+
+.. envvar:: PMA_USER
+    
+    User name to use for :ref:`auth_config`.
+
+.. envvar:: PMA_PASSWORD
+    
+    Password to use for :ref:`auth_config`.
+
+.. envvar:: PMA_PORT
+    
+    Port of the databse server to use.
+
+.. envvar:: PMA_ABSOLUTE_URI
+   
+    The fully-qualified path (``https://pma.example.net/``) where the reverse
+    proxy makes phpMyAdmin available.
+
+By default, :ref:`cookie` is used, but if :envvar:`PMA_USER` and
+:envvar:`PMA_PASSWORD` are set, it is switched to :ref:`auth_config`.
+
+
+To connect phpMyAdmin to given server use:
+
+.. code-block:: sh
+
+    docker run --name myadmin -d -e PMA_HOST=dbhost -p 8080:80 phpmyadmin/phpmyadmin
+
+To connect phpMyAdmin to more servers use:
+
+.. code-block:: sh
+
+    docker run --name myadmin -d -e PMA_HOSTS=dbhost1,dbhost2,dbhost3 -p 8080:80 phpmyadmin/phpmyadmin
+
+To use arbitrary server option:
+
+.. code-block:: sh
+
+    docker run --name myadmin -d --link mysql_db_server:db -p 8080:80 -e PMA_ARBITRARY=1 phpmyadmin/phpmyadmin
+
+You can also link the database container using Docker:
+
+.. code-block:: sh
+
+    docker run --name phpmyadmin -d --link mysql_db_server:db -p 8080:80 phpmyadmin/phpmyadmin
+
+Using docker-compose
+--------------------
+
+Alternatively you can also use docker-compose with the docker-compose.yml from
+<https://github.com/phpmyadmin/docker>.  This will run phpMyAdmin with
+arbitrary server - allowing you to specify MySQL/MariaDB server on login page.
+
+.. code-block:: sh
+
+    docker-compose up -d
+
 .. _quick_install:
 
 Quick Install
@@ -96,6 +194,7 @@ Quick Install
    Downloads page. Some kits contain only the English messages, others
    contain all languages. We'll assume you chose a kit whose name
    looks like ``phpMyAdmin-x.x.x -all-languages.tar.gz``.
+#. Ensure you have downloaded a genuine archive, see :ref:`verify`.
 #. Untar or unzip the distribution (be sure to unzip the subdirectories):
    ``tar -xzvf phpMyAdmin_x.x.x-all-languages.tar.gz`` in your
    webserver's document root. If you don't have direct access to your
@@ -245,6 +344,109 @@ options which the setup script does not provide.
    webserver or limit access by web server configuration, see
    :ref:`faq1_42`.
 
+
+.. _verify:
+
+Verifying phpMyAdmin releases
++++++++++++++++++++++++++++++
+
+Since July 2015 all phpMyAdmin releases are cryptographically signed by the
+releasing developer, who through January 2016 was Marc Delisle. His key id is
+0x81AF644A, his PGP fingerprint is:
+
+.. code-block:: console
+
+    436F F188 4B1A 0C3F DCBF 0D79 FEFC 65D1 81AF 644A
+
+and you can get more identification information from `https://keybase.io/lem9 <https://keybase.io/lem9>`_.
+
+Beginning in January 2016, the release manager is Isaac Bennetch. His key id is
+0x8259BD92, and his PGP fingerprint is:
+
+.. code-block:: console
+
+    3D06 A59E CE73 0EB7 1B51 1C17 CE75 2F17 8259 BD92
+
+and you can get more identification information from `https://keybase.io/ibennetch <https://keybase.io/ibennetch>`_.
+
+You should verify that the signature matches
+the archive you have downloaded. This way you can be sure that you are using
+the same code that was released.
+
+Each archive is accompanied with ``.asc`` files which contains the PGP signature
+for it. Once you have both of them in the same folder, you can verify the signature:
+
+.. code-block:: console
+
+    $ gpg --verify phpMyAdmin-4.5.4.1-all-languages.zip.asc
+    gpg: Signature made Fri 29 Jan 2016 08:59:37 AM EST using RSA key ID 8259BD92
+    gpg: Can't check signature: public key not found
+
+As you can see gpg complains that it does not know the public key. At this
+point you should do one of the following steps:
+
+* Download the keyring from `our download server <https://files.phpmyadmin.net/phpmyadmin.keyring>`_, then import it with:
+
+.. code-block:: console
+
+   $ gpg --import phpmyadmin.keyring
+
+* Download and import the key from one of the key servers:
+
+.. code-block:: console
+
+    $ gpg --keyserver hkp://pgp.mit.edu --recv-keys 8259BD92
+    gpg: requesting key 8259BD92 from hkp server pgp.mit.edu
+    gpg: key 8259BD92: public key "Isaac Bennetch <bennetch@gmail.com>" imported
+    gpg: no ultimately trusted keys found
+    gpg: Total number processed: 1
+    gpg:               imported: 1  (RSA: 1)
+
+This will improve the situation a bit - at this point you can verify that the
+signature from the given key is correct but you still can not trust the name used
+in the key:
+
+.. code-block:: console
+
+    $ gpg --verify phpMyAdmin-4.5.4.1-all-languages.zip.asc
+    gpg: Signature made Fri 29 Jan 2016 08:59:37 AM EST using RSA key ID 8259BD92
+    gpg: Good signature from "Isaac Bennetch <bennetch@gmail.com>"
+    gpg:                 aka "Isaac Bennetch <isaac@bennetch.org>"
+    gpg: WARNING: This key is not certified with a trusted signature!
+    gpg:          There is no indication that the signature belongs to the owner.
+    Primary key fingerprint: 3D06 A59E CE73 0EB7 1B51  1C17 CE75 2F17 8259 BD92
+
+The problem here is that anybody could issue the key with this name.  You need to
+ensure that the key is actually owned by the mentioned person.  The GNU Privacy
+Handbook covers this topic in the chapter `Validating other keys on your public
+keyring`_. The most reliable method is to meet the developer in person and
+exchange key fingerprints, however you can also rely on the web of trust. This way
+you can trust the key transitively though signatures of others, who have met
+the developer in person. For example you can see how `Isaac's key links to
+Linus's key`_.
+
+Once the key is trusted, the warning will not occur:
+
+.. code-block:: console
+
+    $ gpg --verify phpMyAdmin-4.5.4.1-all-languages.zip.asc
+    gpg: Signature made Fri 29 Jan 2016 08:59:37 AM EST using RSA key ID 8259BD92
+    gpg: Good signature from "Isaac Bennetch <bennetch@gmail.com>" [full]
+
+Should the signature be invalid (the archive has been changed), you would get a
+clear error regardless of the fact that the key is trusted or not:
+
+.. code-block:: console
+
+    $ gpg --verify phpMyAdmin-4.5.4.1-all-languages.zip.asc
+    gpg: Signature made Fri 29 Jan 2016 08:59:37 AM EST using RSA key ID 8259BD92
+    gpg: BAD signature from "Isaac Bennetch <bennetch@gmail.com>" [unknown]
+
+.. _Validating other keys on your public keyring: https://www.gnupg.org/gph/en/manual.html#AEN335
+
+.. _Isaac's key links to Linus's key: http://pgp.cs.uu.nl/mk_path.cgi?FROM=00411886&TO=8259BD92
+
+
 .. index::
     single: Configuration storage
     single: phpMyAdmin configuration storage
@@ -327,8 +529,15 @@ using following statement:
 Upgrading from an older version
 +++++++++++++++++++++++++++++++
 
-**Never** extract the new version over an existing installation
-of phpMyAdmin; we had evidence of problems caused by this.
+.. warning::
+
+    **Never** extract the new version over an existing installation of
+    phpMyAdmin, always first remove the old files keeping just the
+    configuration.
+
+    This way you will not leave old no longer working code in the directory,
+    which can have severe security implications or can cause various breakages.
+
 
 Simply copy :file:`config.inc.php` from your previous installation into
 the newly unpacked one. Configuration files from old versions may
@@ -350,6 +559,9 @@ If you have upgraded your phpMyAdmin to 4.3.0 or newer from 2.5.0 or
 newer (<= 4.2.x) and if you use the phpMyAdmin configuration storage, you
 should run the :term:`SQL` script found in
 :file:`sql/upgrade_column_info_4_3_0+.sql`.
+
+Do not forget to clear the browser cache and to empty the old session by
+logging out and logging in again.
 
 .. index:: Authentication mode
 
@@ -400,6 +612,15 @@ HTTP authentication mode
 * Is supported with most PHP configurations. For :term:`IIS` (:term:`ISAPI`)
   support using :term:`CGI` PHP see :ref:`faq1_32`, for using with Apache
   :term:`CGI` see :ref:`faq1_35`.
+* When PHP is running under Apache's :term:`mod_proxy_fcgi` (e.g. with PHP-FPM),
+  ``Authorization`` headers are not passed to the underlying FCGI application,
+  such that your credentials will not reach the application. In this case, you can
+  add the following configuration directive:
+
+  .. code-block:: apache
+
+     SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+
 * See also :ref:`faq4_4` about not using the :term:`.htaccess` mechanism along with
   ':term:`HTTP`' authentication mode.
 
@@ -467,6 +688,8 @@ in :file:`examples/signon-script.php`:
 
 .. index:: pair: Config; Authentication mode
 
+.. _auth_config:
+
 Config authentication mode
 --------------------------
 
@@ -529,6 +752,8 @@ Securing your phpMyAdmin installation
 The phpMyAdmin team tries hard to make the application secure, however there
 are always ways to make your installation more secure:
 
+* Serve phpMyAdmin on HTTPS only. Preferably, you should use HSTS as well, so that
+  you're protected from protocol downgrade attacks.
 * Remove the ``setup`` directory from phpMyAdmin, you will probably not
   use it after the initial setup.
 * Properly choose an authentication method - :ref:`cookie`
@@ -537,7 +762,41 @@ are always ways to make your installation more secure:
   phpMyAdmin, you can use :config:option:`$cfg['Servers'][$i]['AllowDeny']['rules']` to limit them.
 * Consider hiding phpMyAdmin behind an authentication proxy, so that
   users need to authenticate prior to providing MySQL credentials
-  to phpMyAdmin.
+  to phpMyAdmin. You can achieve this by configuring your web server to request
+  HTTP authentication. For example in Apache this can be done with:
+    
+  .. code-block:: apache
+
+     AuthType Basic
+     AuthName "Restricted Access"
+     AuthUserFile /usr/share/phpmyadmin/passwd
+     Require valid-user
+
+  Once you have changed the configuration, you need to create a list of users which
+  can authenticate. This can be done using the :program:`htpasswd` utility:
+
+  .. code-block:: sh
+
+     htpasswd -c /usr/share/phpmyadmin/passwd username
+
 * If you are afraid of automated attacks, enabling Captcha by
   :config:option:`$cfg['CaptchaLoginPublicKey']` and
   :config:option:`$cfg['CaptchaLoginPrivateKey']` might be an option.
+
+Known issues
+++++++++++++
+
+Users with column-specific privileges are unable to "Browse"
+------------------------------------------------------------
+
+If a user has only column-specific privileges on some (but not all) columns in a table, "Browse"
+will fail with an error message.
+
+As a workaround, a bookmarked query with the same name as the table can be created, this will
+run when using the "Browse" link instead. `Issue 11922 <https://github.com/phpmyadmin/phpmyadmin/issues/11922>`_.
+
+Trouble logging back in after logging out using 'http' authentication
+----------------------------------------------------------------------
+
+When using the 'http' ``auth_type``, it can be impossible to log back in (when the logout comes
+manually or after a period of inactivity). `Issue 11898 <https://github.com/phpmyadmin/phpmyadmin/issues/11898>`_.

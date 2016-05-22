@@ -7,11 +7,18 @@
  *
  * @package PhpMyAdmin
  */
+use PMA\libraries\config\PageSettings;
+use PMA\libraries\Response;
+use PMA\libraries\Util;
 
 /**
  * Gets the variables sent or posted to this script and displays the header
  */
 require_once 'libraries/common.inc.php';
+require_once 'libraries/config/user_preferences.forms.php';
+require_once 'libraries/config/page_settings.forms.php';
+
+PageSettings::showGroup('Edit');
 
 /**
  * Ensures db and table are valid, else moves to the "parent" script
@@ -47,7 +54,7 @@ require_once 'libraries/file_listing.lib.php';
  * (at this point, $GLOBALS['goto'] will be set but could be empty)
  */
 if (empty($GLOBALS['goto'])) {
-    if (/*overload*/mb_strlen($table)) {
+    if (mb_strlen($table)) {
         // avoid a problem (see bug #2202709)
         $GLOBALS['goto'] = 'tbl_sql.php';
     } else {
@@ -69,14 +76,15 @@ $comments_map = PMA_getCommentsMap($db, $table);
 /**
  * Load JavaScript files
  */
-$response = PMA_Response::getInstance();
+$response = Response::getInstance();
 $header   = $response->getHeader();
 $scripts  = $header->getScripts();
-$scripts->addFile('functions.js');
 $scripts->addFile('sql.js');
 $scripts->addFile('tbl_change.js');
 $scripts->addFile('big_ints.js');
 $scripts->addFile('jquery/jquery-ui-timepicker-addon.js');
+$scripts->addFile('jquery/jquery.validate.js');
+$scripts->addFile('jquery/additional-methods.js');
 $scripts->addFile('gis_data_editor.js');
 
 /**
@@ -85,11 +93,8 @@ $scripts->addFile('gis_data_editor.js');
  * $disp_message come from tbl_replace.php
  */
 if (! empty($disp_message)) {
-    $response->addHTML(PMA_Util::getMessage($disp_message, null));
+    $response->addHTML(Util::getMessage($disp_message, null));
 }
-
-// used as a global by PMA_Util::getDefaultFunctionForField()
-$analyzed_sql = PMA_Table::analyzeStructure($db, $table);
 
 $table_columns = PMA_getTableColumns($db, $table);
 
@@ -150,7 +155,7 @@ $html_output .= PMA_getHtmlForInsertEditFormHeader($has_blob_field, $is_upload);
 
 $html_output .= PMA_URL_getHiddenInputs($_form_params);
 
-$titles['Browse'] = PMA_Util::getIcon('b_browse.png', __('Browse foreign values'));
+$titles['Browse'] = Util::getIcon('b_browse.png', __('Browse foreign values'));
 
 // user can toggle the display of Function column and column types
 // (currently does not work for multi-edits)
@@ -189,7 +194,7 @@ foreach ($rows as $row_id => $current_row) {
     }
 
     $html_output .= PMA_getHtmlForInsertEditRow(
-        $url_params, $table_columns, $column, $comments_map, $timestamp_seen,
+        $url_params, $table_columns, $comments_map, $timestamp_seen,
         $current_result, $chg_evt_handler, $jsvkey, $vkey, $insert_mode,
         $current_row, $o_rows, $tabindex, $columns_cnt,
         $is_upload, $tabindex_for_function, $foreigners, $tabindex_for_null,
@@ -199,8 +204,6 @@ foreach ($rows as $row_id => $current_row) {
 } // end foreach on multi-edit
 $scripts->addFiles($GLOBALS['plugin_scripts']);
 unset($unsaved_values, $checked, $repopulate, $GLOBALS['plugin_scripts']);
-
-$html_output .= PMA_getHtmlForGisEditor();
 
 if (! isset($after_insert)) {
     $after_insert = 'back';
@@ -214,11 +217,13 @@ $html_output .= PMA_getActionsPanel(
 
 if ($biggest_max_file_size > 0) {
     $html_output .= '        '
-        . PMA_Util::generateHiddenMaxFileSize(
+        . Util::generateHiddenMaxFileSize(
             $biggest_max_file_size
         ) . "\n";
 }
 $html_output .= '</form>';
+
+$html_output .= PMA_getHtmlForGisEditor();
 // end Insert/Edit form
 
 if ($insert_mode) {
@@ -229,4 +234,3 @@ if ($insert_mode) {
 }
 
 $response->addHTML($html_output);
-?>

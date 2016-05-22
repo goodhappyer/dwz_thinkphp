@@ -11,10 +11,10 @@
  */
 function changePluginOpts()
 {
-    $("#format_specific_opts div.format_specific_options").each(function () {
+    $("#format_specific_opts").find("div.format_specific_options").each(function () {
         $(this).hide();
     });
-    var selected_plugin_name = $("#plugins option:selected").val();
+    var selected_plugin_name = $("#plugins").find("option:selected").val();
     $("#" + selected_plugin_name + "_options").fadeIn('slow');
     if (selected_plugin_name == "csv") {
         $("#import_notification").text(PMA_messages.strImportCSV);
@@ -65,15 +65,6 @@ AJAX.registerOnload('import.js', function () {
 
         if (radioLocalImport.length !== 0) {
             // remote upload.
-            // TODO Remove this section when all browsers support HTML5 "required" property
-            if (! radioLocalImport.is(":checked") && ! radioImport.is(":checked")) {
-                radioImport.focus();
-                var msg = '<div class="error"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_error" /> ';
-                msg += PMA_messages.strRadioUnchecked;
-                msg += '</div>';
-                PMA_ajaxShowMessage(msg, false);
-                return false;
-            }
 
             if (radioImport.is(":checked") && $("#input_import_file").val() === '') {
                 $("#input_import_file").focus();
@@ -141,7 +132,7 @@ AJAX.registerOnload('import.js', function () {
      *  Javascript-disabled browsers
      */
     $("#scroll_to_options_msg").hide();
-    $("#format_specific_opts div.format_specific_options")
+    $("#format_specific_opts").find("div.format_specific_options")
     .css({
         "border": 0,
         "margin": 0,

@@ -112,26 +112,22 @@ AJAX.registerOnload('server_databases.js', function () {
             if (typeof data !== 'undefined' && data.success === true) {
                 PMA_ajaxShowMessage(data.message);
 
-                //Append database's row to table
-                $("#tabledatabases")
-                .find('tbody')
-                .append(data.new_db_string)
-                .PMA_sort_table('.name');
-
                 var $databases_count_object = $('#databases_count');
                 var databases_count = parseInt($databases_count_object.text(), 10) + 1;
                 $databases_count_object.text(databases_count);
                 PMA_reloadNavigation();
+
+                // make ajax request to load db structure page - taken from ajax.js
+                var dbStruct_url = data.url_query;
+                dbStruct_url = dbStruct_url.replace(/amp;/ig, '');
+                var params = 'ajax_request=true&ajax_page_request=true';
+                if (! (history && history.pushState)) {
+                    params += PMA_MicroHistory.menus.getRequestParam();
+                }
+                $.get(dbStruct_url, params, AJAX.responseHandler);
             } else {
                 PMA_ajaxShowMessage(data.error, false);
             }
-
-            // make ajax request to load db structure page - taken from ajax.js
-            var dbStruct_url = data.url_query;
-            dbStruct_url = dbStruct_url.replace(/amp;/ig, '');
-            var params = 'ajax_request=true&ajax_page_request=true';
-            params += AJAX.cache.menus.getRequestParam();
-            $.get(dbStruct_url, params, AJAX.responseHandler);
         }); // end $.post()
     }); // end $(document).on()
 }); // end $()

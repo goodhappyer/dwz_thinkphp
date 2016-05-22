@@ -17,6 +17,8 @@ AJAX.registerTeardown('pmd/move.js', function () {
     if ($.FullScreen.supported) {
         $(document).unbind($.FullScreen.prefix + 'fullscreenchange');
     }
+
+    $('#selflink').show();
 });
 
 AJAX.registerOnload('pmd/move.js', function () {
@@ -26,15 +28,18 @@ AJAX.registerOnload('pmd/move.js', function () {
             if (! $.FullScreen.isFullScreen()) {
                 $('#page_content').removeClass('content_fullscreen')
                     .css({'width': 'auto', 'height': 'auto'});
-                var $img = $('#toggleFullscreen img');
-                $img.attr('src', $img.data('enter'));
+                var $img = $('#toggleFullscreen').find('img');
                 var $span = $img.siblings('span');
                 $span.text($span.data('enter'));
+                $img.attr('src', $img.data('enter'))
+                    .attr('title', $span.data('enter'));
             }
         });
     } else {
         $('#toggleFullscreen').hide();
     }
+
+    $('#selflink').hide();
 });
 
 // Below is the function to bind onbeforeunload events with the content_frame as well as the top window.
@@ -121,8 +126,6 @@ document.onmouseup   = MouseUp;
 document.onmousemove = MouseMove;
 
 var isIE = document.all && !window.opera;
-var isNN = !document.all && document.getElementById;
-var isN4 = document.layers;
 
 if (isIE) {
     window.onscroll = General_scroll;
@@ -177,7 +180,7 @@ function MouseMove(e)
         if (ON_grid) {
             new_x = parseInt(new_x / grid_size) * grid_size;
             new_y = parseInt(new_y / grid_size) * grid_size;
-        };
+        }
 
         $cur_click.css('left', new_x + 'px');
         $cur_click.css('top', new_y + 'px');
@@ -190,14 +193,15 @@ function MouseMove(e)
         if (menu_moved) {
             delta_x = -delta_x;
         }
-        var new_width = $('#layer_menu').width() + delta_x;
+        var $layer_menu = $('#layer_menu');
+        var new_width = $layer_menu.width() + delta_x;
         if (new_width < 150) {
             new_width = 150;
         }
         else {
             dx = e.pageX;
         }
-        $('#layer_menu').width(new_width);
+        $layer_menu.width(new_width);
     }
 
     if (ON_relation || ON_display_field) {
@@ -244,6 +248,52 @@ function Osn_tab_pos()
     osn_tab_height = parseInt(document.getElementById('osn_tab').style.height, 10);
 }
 
+function setDefaultValuesFromSavedState()
+{
+    if ($('#angular_direct_button').attr('class') === 'M_butt') {
+        ON_angular_direct = 0;
+    } else {
+        ON_angular_direct = 1;
+    }
+    Angular_direct();
+
+    if ($('#grid_button').attr('class') === 'M_butt') {
+        ON_grid = 1;
+    } else {
+        ON_grid = 0;
+    }
+    Grid();
+
+    var $relLineInvert = $('#relLineInvert');
+    if ($relLineInvert.attr('class') === 'M_butt') {
+        show_relation_lines = false;
+        $relLineInvert.attr('class', 'M_butt');
+    } else {
+        show_relation_lines = true;
+        $relLineInvert.attr('class', 'M_butt_Selected_down');
+    }
+    Relation_lines_invert();
+
+    if ($('#pin_Text').attr('class') === 'M_butt_Selected_down') {
+        always_show_text = true;
+        Show_text();
+    } else {
+        always_show_text = false;
+    }
+
+    var $key_SB_all = $('#key_SB_all');
+    if ($key_SB_all.attr('class') === 'M_butt_Selected_down') {
+        $key_SB_all.click();
+        $key_SB_all.toggleClass('M_butt_Selected_down');
+        $key_SB_all.toggleClass('M_butt');
+    }
+
+    var $key_Left_Right = $('#key_Left_Right');
+    if ($key_Left_Right.attr('class') === 'M_butt_Selected_down') {
+        $key_Left_Right.click();
+    }
+
+}
 
 function Main()
 {
@@ -257,6 +307,7 @@ function Main()
     Canvas_pos();
     Small_tab_refresh();
     Re_load();
+    setDefaultValuesFromSavedState();
     id_hint = document.getElementById('pmd_hint');
     if (isIE) {
         General_scroll();
@@ -374,8 +425,8 @@ function Re_load()
                     row_offset_top = 0;
                     tab_hide_button = document.getElementById('id_hide_tbody_' + contr[K][key][key2][key3][0]);
                     if (tab_hide_button.innerHTML == 'v') {
-                        var toColumn = document.getElementById(contr[K][key][key2][key3][0]
-                            + '.' + contr[K][key][key2][key3][1]);
+                        var toColumn = document.getElementById(contr[K][key][key2][key3][0] +
+                            '.' + contr[K][key][key2][key3][1]);
                         if (toColumn) {
                             row_offset_top = toColumn.offsetTop;
                         } else {
@@ -533,19 +584,24 @@ function Rect(x1, y1, w, h, color)
 //--------------------------- FULLSCREEN -------------------------------------
 function Toggle_fullscreen()
 {
-    var $img = $('#toggleFullscreen img');
+    var value_sent = '';
+    var $img = $('#toggleFullscreen').find('img');
     var $span = $img.siblings('span');
     if (! $.FullScreen.isFullScreen()) {
         $img.attr('src', $img.data('exit'))
+            .attr('title', $span.data('exit'));
         $span.text($span.data('exit'));
         $('#page_content')
             .addClass('content_fullscreen')
             .css({'width': screen.width - 5, 'height': screen.height - 5})
             .requestFullScreen();
+        value_sent = 'on';
     }
     if ($.FullScreen.isFullScreen()) {
         $.FullScreen.cancelFullScreen();
+        value_sent = 'off';
     }
+    saveValueInConfig('full_screen', value_sent);
 }
 // ------------------------------ NEW ------------------------------------------
 
@@ -676,6 +732,7 @@ function Save3(callback)
         };
 
         var $form = $('<form action="db_designer.php" method="post" name="save_page" id="save_page" class="ajax"></form>')
+            .append('<input type="hidden" name="server" value="' + server + '" />')
             .append('<input type="hidden" name="db" value="' + db + '" />')
             .append('<input type="hidden" name="token" value="' + token + '" />')
             .append('<input type="hidden" name="operation" value="savePage" />')
@@ -718,7 +775,7 @@ function Edit_pages()
         };
 
         var $msgbox = PMA_ajaxShowMessage();
-        var params = 'ajax_request=true&dialog=edit&token=' + token + '&db=' + db;
+        var params = 'ajax_request=true&dialog=edit&server=' + server + '&token=' + token + '&db=' + db;
         $.get("db_designer.php", params, function (data) {
             if (data.success === false) {
                 PMA_ajaxShowMessage(data.error, false);
@@ -727,7 +784,7 @@ function Edit_pages()
 
                 if (! pmd_tables_enabled) {
                     Create_page_list(db, function (options) {
-                        $("#page_edit_dialog #selected_page").append(options);
+                        $("#selected_page").append(options);
                     });
                 }
                 $('<div id="page_edit_dialog"></div>')
@@ -798,7 +855,7 @@ function Delete_pages()
     };
 
     var $msgbox = PMA_ajaxShowMessage();
-    var params = 'ajax_request=true&dialog=delete&token=' + token + '&db=' + db;
+    var params = 'ajax_request=true&dialog=delete&server=' + server + '&token=' + token + '&db=' + db;
     $.get("db_designer.php", params, function (data) {
         if (data.success === false) {
             PMA_ajaxShowMessage(data.error, false);
@@ -807,7 +864,7 @@ function Delete_pages()
 
             if (! pmd_tables_enabled) {
                 Create_page_list(db, function (options) {
-                    $("#page_delete_dialog #selected_page").append(options);
+                    $("#selected_page").append(options);
                 });
             }
 
@@ -897,7 +954,7 @@ function Save_as()
     };
 
     var $msgbox = PMA_ajaxShowMessage();
-    var params = 'ajax_request=true&dialog=save_as&token=' + token + '&db=' + db;
+    var params = 'ajax_request=true&dialog=save_as&server=' + server + '&token=' + token + '&db=' + db;
     $.get("db_designer.php", params, function (data) {
         if (data.success === false) {
             PMA_ajaxShowMessage(data.error, false);
@@ -906,7 +963,7 @@ function Save_as()
 
             if (! pmd_tables_enabled) {
                 Create_page_list(db, function (options) {
-                    $("#page_save_as_dialog #selected_page").append(options);
+                    $("#selected_page").append(options);
                 });
             }
 
@@ -914,7 +971,7 @@ function Save_as()
                 .append(data.message)
                 .dialog({
                     appendTo: '#page_content',
-                    title: "Save table coordinates",
+                    title: PMA_messages.strSavePageAs,
                     width: 450,
                     modal: true,
                     buttons: button_options,
@@ -974,7 +1031,7 @@ function Export_pages()
         $(this).dialog('close');
     };
     var $msgbox = PMA_ajaxShowMessage();
-    var params = 'ajax_request=true&dialog=export&token=' + token + '&db=' + db + '&selected_page=' + selected_page;
+    var params = 'ajax_request=true&dialog=export&server=' + server + '&token=' + token + '&db=' + db + '&selected_page=' + selected_page;
     $.get("db_designer.php", params, function (data) {
         if (data.success === false) {
             PMA_ajaxShowMessage(data.error, false);
@@ -1015,7 +1072,7 @@ function Load_page(page) {
         if (page !== null) {
             param_page = '&page=' + page;
         }
-        $('<a href="db_designer.php?db=' + db + '&token=' + token + param_page + '"></a>')
+        $('<a href="db_designer.php?server=' + server + '&db=' + db + '&token=' + token + param_page + '"></a>')
             .appendTo($('#page_content'))
             .click();
     } else {
@@ -1032,26 +1089,45 @@ function Load_page(page) {
 
 function Grid()
 {
+	var value_sent = '';
     if (!ON_grid) {
         ON_grid = 1;
+        value_sent = 'on';
         document.getElementById('grid_button').className = 'M_butt_Selected_down';
     } else {
         document.getElementById('grid_button').className = 'M_butt';
         ON_grid = 0;
+        value_sent = 'off';
     }
+    saveValueInConfig('snap_to_grid', value_sent);
 }
 
 function Angular_direct()
 {
+    var value_sent = '';
     if (ON_angular_direct) {
         ON_angular_direct = 0;
+        value_sent = 'angular';
         document.getElementById('angular_direct_button').className = 'M_butt_Selected_down';
     } else {
         ON_angular_direct = 1;
+        value_sent = 'direct';
         document.getElementById('angular_direct_button').className = 'M_butt';
     }
+    saveValueInConfig('angular_direct', value_sent);
     Re_load();
 }
+
+function saveValueInConfig(index_sent, value_sent) {
+    $.post('db_designer.php',
+        {operation: 'save_setting_value', index: index_sent, ajax_request: true, server: server, token: token, value: value_sent},
+        function (data) {
+        if (data.success === false) {
+            PMA_ajaxShowMessage(data.error, false);
+        }
+    });
+}
+
 //++++++++++++++++++++++++++++++ RELATION ++++++++++++++++++++++++++++++++++++++
 function Start_relation()
 {
@@ -1180,6 +1256,7 @@ function Small_tab_all(id_this) // max/min all tables
 {
     var icon = id_this.childNodes[0];
     var key;
+    var value_sent = '';
     if (icon.alt == "v") {
         for (key in j_tabs) {
             if (document.getElementById('id_hide_tbody_' + key).innerHTML == "v") {
@@ -1188,6 +1265,7 @@ function Small_tab_all(id_this) // max/min all tables
         }
         icon.alt = ">";
         icon.src = icon.dataset.right;
+        value_sent = 'v';
     } else {
         for (key in j_tabs) {
             if (document.getElementById('id_hide_tbody_' + key).innerHTML != "v") {
@@ -1196,7 +1274,11 @@ function Small_tab_all(id_this) // max/min all tables
         }
         icon.alt = "v";
         icon.src = icon.dataset.down;
+        value_sent = '>';
     }
+    saveValueInConfig('small_big_all', value_sent);
+    $('#key_SB_all').toggleClass('M_butt_Selected_down');
+    $('#key_SB_all').toggleClass('M_butt');
     Re_load();
 }
 
@@ -1211,6 +1293,9 @@ function Small_tab_invert() // invert max/min all tables
 function Relation_lines_invert()
 {
     show_relation_lines = ! show_relation_lines;
+    saveValueInConfig('relation_lines', show_relation_lines);
+    $('#relLineInvert').toggleClass('M_butt_Selected_down');
+    $('#relLineInvert').toggleClass('M_butt');
     Re_load();
 }
 
@@ -1449,7 +1534,7 @@ function No_have_constr(id_this)
 
     if (id_this.alt == 'v') {
         id_this.alt = '>';
-        id_this.src = id_this.dataset.right;;
+        id_this.src = id_this.dataset.right;
     } else {
         id_this.alt = 'v';
         id_this.src = id_this.dataset.down;
@@ -1539,19 +1624,24 @@ function Side_menu_right(id_this)
     icon.attr('src', icon.attr('data-right'));
     icon.attr('data-right', current);
     menu_moved = !menu_moved;
+    saveValueInConfig('side_menu', $('#side_menu').hasClass('right'));
+    $('#key_Left_Right').toggleClass('M_butt_Selected_down');
+    $('#key_Left_Right').toggleClass('M_butt');
 }
 //------------------------------------------------------------------------------
 function Show_text () {
-    $('#side_menu .hidable').show();
+    $('#side_menu').find('.hidable').show();
 }
 function Hide_text () {
     if (!always_show_text) {
-        $('#side_menu .hidable').hide();
+        $('#side_menu').find('.hidable').hide();
     }
 }
 function Pin_text () {
     always_show_text = !always_show_text;
     $('#pin_Text').toggleClass('M_butt_Selected_down');
+    $('#pin_Text').toggleClass('M_butt');
+    saveValueInConfig('pin_text', always_show_text);
 }
 //------------------------------------------------------------------------------
 function Start_display_field()
@@ -1594,14 +1684,14 @@ function getColorByTarget(target)
         var j = (i - d) / 6;
         j = j % 4;
         j++;
-        var color_case = new Array(
-            new Array(1, 0, 0),
-            new Array(0, 1, 0),
-            new Array(0, 0, 1),
-            new Array(1, 1, 0),
-            new Array(1, 0, 1),
-            new Array(0, 1, 1)
-        );
+        var color_case = [
+            [1, 0, 0],
+            [0, 1, 0],
+            [0, 0, 1],
+            [1, 1, 0],
+            [1, 0, 1],
+            [0, 1, 1]
+        ];
         var a = color_case[d][0];
         var b = color_case[d][1];
         var c = color_case[d][2];
@@ -1612,7 +1702,7 @@ function getColorByTarget(target)
         b = Math.round(c * 200 * e);
         color = "rgba(" + r + "," + g + "," + b + ",1)";
 
-        TargetColors.push(new Array(target, color));
+        TargetColors.push([target, color]);
     }
 
     return color;
@@ -1738,26 +1828,26 @@ function add_object()
         }
         p = document.getElementById('Query');
         where_obj = new where(rel.value, p.value);//make where object
-        history_array.push(new history(col_name, where_obj, tab_name, h_tabs[downer + '.' + tab_name], "Where"));
+        history_array.push(new history_obj(col_name, where_obj, tab_name, h_tabs[downer + '.' + tab_name], "Where"));
         sum = sum + 1;
         rel.value = '--';
         p.value = "";
     }
     if (document.getElementById('new_name').value !== "") {
         var rename_obj = new rename(document.getElementById('new_name').value);//make Rename object
-        history_array.push(new history(col_name, rename_obj, tab_name, h_tabs[downer + '.' + tab_name], "Rename"));
+        history_array.push(new history_obj(col_name, rename_obj, tab_name, h_tabs[downer + '.' + tab_name], "Rename"));
         sum = sum + 1;
         document.getElementById('new_name').value = "";
     }
     if (document.getElementById('operator').value != '---') {
         var aggregate_obj = new aggregate(document.getElementById('operator').value);
-        history_array.push(new history(col_name, aggregate_obj, tab_name, h_tabs[downer + '.' + tab_name], "Aggregate"));
+        history_array.push(new history_obj(col_name, aggregate_obj, tab_name, h_tabs[downer + '.' + tab_name], "Aggregate"));
         sum = sum + 1;
         document.getElementById('operator').value = '---';
         //make aggregate operator
     }
     if (document.getElementById('groupby').checked === true) {
-        history_array.push(new history(col_name, 'GroupBy', tab_name, h_tabs[downer + '.' + tab_name], "GroupBy"));
+        history_array.push(new history_obj(col_name, 'GroupBy', tab_name, h_tabs[downer + '.' + tab_name], "GroupBy"));
         sum = sum + 1;
         document.getElementById('groupby').checked = false;
         //make groupby
@@ -1774,16 +1864,17 @@ function add_object()
             p.value,
             document.getElementById('h_operator').value
         );//make where object
-        history_array.push(new history(col_name, where_obj, tab_name, h_tabs[downer + '.' + tab_name], "Having"));
+        history_array.push(new history_obj(col_name, where_obj, tab_name, h_tabs[downer + '.' + tab_name], "Having"));
         sum = sum + 1;
         document.getElementById('h_rel_opt').value = '--';
         document.getElementById('h_operator').value = '---';
         p.value = ""; //make having
     }
-    if (document.getElementById('orderby').checked === true) {
-        history_array.push(new history(col_name, 'OrderBy', tab_name, h_tabs[downer + '.' + tab_name], "OrderBy"));
+    if (document.getElementById('orderby').value != '---') {
+        var oderby_obj = new orderby(document.getElementById('orderby').value);
+        history_array.push(new history_obj(col_name, oderby_obj, tab_name, h_tabs[downer + '.' + tab_name], "OrderBy"));
         sum = sum + 1;
-        document.getElementById('orderby').checked = false;
+        document.getElementById('orderby').value = '---';
         //make orderby
     }
     PMA_ajaxShowMessage(PMA_sprintf(PMA_messages.strObjectsCreated, sum));
@@ -1791,7 +1882,7 @@ function add_object()
     var existingDiv = document.getElementById('ab');
     existingDiv.innerHTML = display(init, history_array.length);
     Close_option();
-    panel(0);
+    $('#ab').accordion("refresh");
 }
 
 AJAX.registerTeardown('pmd/move.js', function () {
@@ -1822,7 +1913,7 @@ AJAX.registerTeardown('pmd/move.js', function () {
     $("#key_HS").unbind('click');
     $('.scroll_tab_struct').unbind('click');
     $('.scroll_tab_checkbox').unbind('click');
-    $('#id_scroll_tab tr').off('click', '.pmd_Tabs2,.pmd_Tabs');
+    $('#id_scroll_tab').find('tr').off('click', '.pmd_Tabs2,.pmd_Tabs');
     $('.pmd_tab').off('click', '.select_all_1');
     $('.pmd_tab').off('click', '.small_tab,.small_tab2');
     $('.pmd_tab').off('click', '.small_tab_pref_1');
@@ -1944,7 +2035,7 @@ AJAX.registerOnload('pmd/move.js', function () {
     $('.scroll_tab_checkbox').click(function() {
         VisibleTab(this,$(this).val());
     });
-    $('#id_scroll_tab tr').on('click', '.pmd_Tabs2,.pmd_Tabs', function() {
+    $('#id_scroll_tab').find('tr').on('click', '.pmd_Tabs2,.pmd_Tabs', function() {
         Select_tab($(this).attr('pmd_url_table_name'));
     });
     $('.pmd_tab').on('click', '.select_all_1', function() {

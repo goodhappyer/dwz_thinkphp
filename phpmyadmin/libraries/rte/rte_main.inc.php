@@ -28,7 +28,18 @@ if ($GLOBALS['is_ajax_request'] != true) {
     } else {
         $table = '';
         include_once './libraries/db_common.inc.php';
-        include_once './libraries/db_info.inc.php';
+
+        list(
+            $tables,
+            $num_tables,
+            $total_num_tables,
+            $sub_part,
+            $is_show_stats,
+            $db_is_system_schema,
+            $tooltip_truename,
+            $tooltip_aliasname,
+            $pos
+        ) = PMA\libraries\Util::getDbInfo($db, isset($sub_part) ? $sub_part : '');
     }
 } else {
     /**
@@ -36,7 +47,7 @@ if ($GLOBALS['is_ajax_request'] != true) {
      * to manually select the required database and
      * create the missing $url_query variable
      */
-    if (/*overload*/mb_strlen($db)) {
+    if (mb_strlen($db)) {
         $GLOBALS['dbi']->selectDb($db);
         if (! isset($url_query)) {
             $url_query = PMA_URL_getCommon(
@@ -63,7 +74,7 @@ $ajax_class = array(
 /**
  * Create labels for the list
  */
-$titles = PMA_Util::buildActionTitles();
+$titles = PMA\libraries\Util::buildActionTitles();
 
 /**
  * Keep a list of errors that occurred while
@@ -91,4 +102,3 @@ case 'EVN':
     break;
 }
 
-?>

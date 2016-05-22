@@ -38,10 +38,9 @@ $(function () {
 $(document).ready(function(){
     width = 0;
     $('ul.tabs li').each(function(){
-        tabWidth = $(this).width() + 10;
-        width += tabWidth;
+        width += $(this).width() + 10;
     });
-    contentWidth = width;
+    var contentWidth = width;
     width += 250;
     $('body').css('min-width', width);
     $('.tabs_contents').css('min-width', contentWidth);

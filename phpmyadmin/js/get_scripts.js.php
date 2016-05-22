@@ -26,12 +26,13 @@ $_GET['scripts'] = json_encode($_GET['scripts']);
 define('PMA_MINIMUM_COMMON', true);
 require_once './libraries/common.inc.php';
 
-include_once './libraries/OutputBuffering.class.php';
-$buffer = PMA_OutputBuffering::getInstance();
+$buffer = PMA\libraries\OutputBuffering::getInstance();
 $buffer->start();
-register_shutdown_function(function() {
-    echo PMA_OutputBuffering::getInstance()->getContents();
-});
+register_shutdown_function(
+    function () {
+        echo PMA\libraries\OutputBuffering::getInstance()->getContents();
+    }
+);
 
 $_GET['scripts'] = json_decode($_GET['scripts']);
 if (! empty($_GET['scripts']) && is_array($_GET['scripts'])) {
@@ -59,4 +60,3 @@ if (! empty($_GET['scripts']) && is_array($_GET['scripts'])) {
 if (isset($_GET['call_done'])) {
     echo "AJAX.scriptHandler.done();";
 }
-?>

@@ -5,12 +5,12 @@
  *
  * @package PhpMyAdmin
  */
+use PMA\libraries\plugins\SchemaPlugin;
 
 /**
  * Gets some core libraries
  */
 require_once 'libraries/common.inc.php';
-require 'libraries/StorageEngine.class.php';
 
 /**
  * get all variables needed for exporting relational schema
@@ -18,25 +18,17 @@ require 'libraries/StorageEngine.class.php';
  */
 $cfgRelation = PMA_getRelationsParam();
 
-require_once 'libraries/Index.class.php';
 require_once 'libraries/pmd_common.php';
 require_once 'libraries/plugin_interface.lib.php';
 
-/**
- * get all the export options and verify
- * call and include the appropriate Schema Class depending on $export_type
- * default is PDF
- */
-
-$post_params = array(
-    'db'
-);
-foreach ($post_params as $one_post_param) {
-    if (isset($_REQUEST[$one_post_param])) {
-        $GLOBALS[$one_post_param] = $_REQUEST[$one_post_param];
-    }
+if (! isset($_REQUEST['export_type'])) {
+    PMA\libraries\Util::checkParameters(array('export_type'));
 }
 
+/**
+ * Include the appropriate Schema Class depending on $export_type
+ * default is PDF
+ */
 PMA_processExportSchema($_REQUEST['export_type']);
 
 /**
@@ -60,6 +52,7 @@ function PMA_processExportSchema($export_type)
     $export_type = PMA_securePath($export_type);
 
     // get the specific plugin
+    /* @var $export_plugin SchemaPlugin */
     $export_plugin = PMA_getPlugin(
         "schema",
         $export_type,
@@ -74,4 +67,3 @@ function PMA_processExportSchema($export_type)
     $GLOBALS['dbi']->selectDb($GLOBALS['db']);
     $export_plugin->exportSchema($GLOBALS['db']);
 }
-?>

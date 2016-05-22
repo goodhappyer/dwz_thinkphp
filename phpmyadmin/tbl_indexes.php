@@ -6,55 +6,46 @@
  * @package PhpMyAdmin
  */
 
-/**
- * Gets some core libraries
- */
-require_once 'libraries/common.inc.php';
-require_once 'libraries/Index.class.php';
-require_once 'libraries/tbl_indexes.lib.php';
+namespace PMA;
 
-if (! isset($_REQUEST['create_edit_table'])) {
+use PMA\libraries\controllers\table\TableIndexesController;
+use PMA\libraries\Index;
+use PMA\libraries\Response;
+
+require_once 'libraries/common.inc.php';
+
+$container = libraries\di\Container::getDefaultContainer();
+$container->factory('PMA\libraries\controllers\table\TableIndexesController');
+$container->alias(
+    'TableIndexesController',
+    'PMA\libraries\controllers\table\TableIndexesController'
+);
+$container->set('PMA\libraries\Response', Response::getInstance());
+$container->alias('response', 'PMA\libraries\Response');
+
+/* Define dependencies for the concerned controller */
+$db = $container->get('db');
+$table = $container->get('table');
+$dbi = $container->get('dbi');
+
+if (!isset($_REQUEST['create_edit_table'])) {
     include_once 'libraries/tbl_common.inc.php';
 }
-
-
-$index = PMA_prepareFormValues($db, $table);
-/**
- * Process the data from the edit/create index form,
- * run the query to build the new index
- * and moves back to "tbl_sql.php"
- */
-if (isset($_REQUEST['do_save_data'])) {
-    PMA_handleCreateOrEditIndex($db, $table, $index);
-} // end builds the new index
-
-
-/**
- * Display the form to edit/create an index
- */
-require_once 'libraries/tbl_info.inc.php';
-
-$add_fields = PMA_getNumberOfFieldsForForm($index);
-
-$form_params = PMA_getFormParameters($db, $table);
-
-// Get fields and stores their name/type
-if (isset($_REQUEST['create_edit_table'])) {
-    $fields = json_decode($_REQUEST['columns'], true);
-    $index_params = array(
-        'Non_unique' => ($_REQUEST['index']['Index_choice'] == 'UNIQUE') ? '0' : '1'
-    );
-    $index->set($index_params);
-    $add_fields = count($fields);
+if (isset($_REQUEST['index'])) {
+    if (is_array($_REQUEST['index'])) {
+        // coming already from form
+        $index = new Index($_REQUEST['index']);
+    } else {
+        $index = $dbi->getTable($db, $table)->getIndex($_REQUEST['index']);
+    }
 } else {
-    $fields = PMA_getNameAndTypeOfTheColumns($db, $table);
+    $index = new Index;
 }
 
-$html = PMA_getHtmlForIndexForm($fields, $index, $form_params, $add_fields);
+$dependency_definitions = array(
+    "index" => $index
+);
 
-$response = PMA_Response::getInstance();
-$response->addHTML($html);
-$header   = $response->getHeader();
-$scripts  = $header->getScripts();
-$scripts->addFile('indexes.js');
-?>
+/** @var TableIndexesController $controller */
+$controller = $container->get('TableIndexesController', $dependency_definitions);
+$controller->indexAction();

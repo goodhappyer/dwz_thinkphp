@@ -6,13 +6,13 @@ Requirements
 Web server
 ----------
 
-Since, phpMyAdmin's interface is based entirely in your browser, you'll need a
-web server (such as Apache, :term:`IIS`) to install phpMyAdmin's files into.
+Since phpMyAdmin's interface is based entirely in your browser, you'll need a
+web server (such as Apache, nginx, :term:`IIS`) to install phpMyAdmin's files into.
 
 PHP
 ---
 
-* You need PHP 5.3.0 or newer, with ``session`` support, the Standard PHP Library
+* You need PHP 5.5.0 or newer, with ``session`` support, the Standard PHP Library
   (SPL) extension, JSON support, and the ``mbstring`` extension.
 
 * To support uploading of ZIP files, you need the PHP ``zip`` extension.
@@ -20,8 +20,8 @@ PHP
 * You need GD2 support in PHP to display inline thumbnails of JPEGs
   ("image/jpeg: inline") with their original aspect ratio.
 
-* When using the cookie authentication (the default), the `mcrypt
-  <http://www.php.net/mcrypt>`_ extension is strongly suggested.
+* When using the cookie authentication (the default), the `openssl
+  <http://www.php.net/openssl>`_ extension is strongly suggested.
 
 * To support upload progress bars, see :ref:`faq2_9`.
 
@@ -30,6 +30,10 @@ PHP
 
 * To support reCAPTCHA on the login page, you need the
   `openssl <http://www.php.net/openssl>`_ extension.
+
+* To support displaying phpMyAdmin's latest version, you need to enable
+  ``allow_url_open`` in your :file:`php.ini` or to have the
+  `curl <http://www.php.net/curl>`_ extension.
 
 * Performance suggestion: install the ``ctype`` extension.
 
@@ -42,13 +46,14 @@ phpMyAdmin supports MySQL-compatible databases.
 
 * MySQL 5.5 or newer
 * MariaDB 5.5 or newer
-* Drizzle
 
 .. seealso:: :ref:`faq1_17`
 
 Web browser
 -----------
 
-To access phpMyAdmin you need a web browser with cookies and javascript
+To access phpMyAdmin you need a web browser with cookies and JavaScript
 enabled.
 
+You need browser which is supported by jQuery 2.0, see
+<https://jquery.com/browser-support/>.

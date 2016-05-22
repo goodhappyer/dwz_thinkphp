@@ -41,4 +41,5 @@ return [
     'master_num'  => 1,
     // 指定从服务器序号
     'slave_no'    => '',
+
 ];

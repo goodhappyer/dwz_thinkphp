@@ -7,11 +7,11 @@
  */
 
 // unplanned execution path
-if (! defined('PMA_MINIMUM_COMMON')) {
+if (! defined('PMA_MINIMUM_COMMON') && ! defined('TESTSUITE')) {
     exit();
 }
 
-$bg = $_SESSION['PMA_Theme']->getImgPath() . 'sprites.png';
+$bg = $_SESSION['PMA_Theme']->getImgPath() . 'sprites.png?v=' . urlencode(PMA_VERSION);
 /* Check if there is a valid data file for sprites */
 if (is_readable($_SESSION['PMA_Theme']->getPath() . '/sprites.lib.php')) {
 

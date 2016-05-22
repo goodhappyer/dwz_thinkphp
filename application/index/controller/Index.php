@@ -2,13 +2,21 @@
 namespace app\index\controller;
 use think\Db;
 use app\common\model\JQGrid;
+use \think\View;
 
 class Index
 {
 	public function index()
 	{
-		$jqgrid=new JQGrid(['table_name'=>'jqgrid_info']);
+		$view=new View();
+		$jqgrid=new JQGrid('jqgrid_info');
+		$view->assign("jqgrid",$jqgrid->show());
+		return $view->fetch();
+	}
+	public function jqgrid_data()
+	{
+		$jqgrid=new JQGrid('jqgrid_info');
 		$jqgrid->show();
-		return "t";
+		echo $jqgrid->data();
 	}
 }

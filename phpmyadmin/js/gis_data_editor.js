@@ -19,11 +19,11 @@ function closeGISEditor() {
 }
 
 /**
- * Prepares the HTML recieved via AJAX.
+ * Prepares the HTML received via AJAX.
  */
 function prepareJSVersion() {
     // Change the text on the submit button
-    $("#gis_editor input[name='gis_data[save]']")
+    $("#gis_editor").find("input[name='gis_data[save]']")
         .val(PMA_messages.strCopy)
         .insertAfter($('#gis_data_textarea'))
         .before('<br/><br/>');
@@ -37,7 +37,7 @@ function prepareJSVersion() {
     $('div#gis_data_output p').remove();
 
     // Remove 'add' buttons and add links
-    $('#gis_editor input.add').each(function (e) {
+    $('#gis_editor').find('input.add').each(function (e) {
         var $button = $(this);
         $button.addClass('addJs').removeClass('add');
         var classes = $button.attr('class');
@@ -119,6 +119,9 @@ function loadJSAndGISEditor(value, field, type, input_name, token) {
     script.onload = function () {
         loadGISEditor(value, field, type, input_name, token);
     };
+    script.onerror = function() {
+        loadGISEditor(value, field, type, input_name, token);
+    }
 
     script.src = 'js/openlayers/OpenLayers.js';
     head.appendChild(script);

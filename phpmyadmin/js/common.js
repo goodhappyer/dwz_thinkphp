@@ -7,8 +7,8 @@ $(function () {
 /**
  * Holds common parameters such as server, db, table, etc
  *
- * The content for this is normally loaded from Header.class.php or
- * Response.class.php and executed by ajax.js
+ * The content for this is normally loaded from Header.php or
+ * Response.php and executed by ajax.js
  */
 var PMA_commonParams = (function () {
     /**
@@ -98,8 +98,8 @@ var PMA_commonParams = (function () {
 /**
  * Holds common parameters such as server, db, table, etc
  *
- * The content for this is normally loaded from Header.class.php or
- * Response.class.php and executed by ajax.js
+ * The content for this is normally loaded from Header.php or
+ * Response.php and executed by ajax.js
  */
 var PMA_commonActions = {
     /**
@@ -140,7 +140,7 @@ var PMA_commonActions = {
      */
     refreshMain: function (url, callback) {
         if (! url) {
-            url = $('#selflink a').attr('href');
+            url = $('#selflink').find('a').attr('href');
             url = url.substring(0, url.indexOf('?'));
         }
         url += PMA_commonParams.getUrlQuery();
@@ -350,9 +350,10 @@ PMA_DROP_IMPORT = {
     _dragleave: function (event) {
         event.stopPropagation();
         event.preventDefault();
-        $(".pma_drop_handler").clearQueue().stop();
-        $(".pma_drop_handler").fadeOut();
-        $(".pma_drop_handler").html(PMA_messages.dropImportDropFiles);
+        var $pma_drop_handler = $(".pma_drop_handler");
+        $pma_drop_handler.clearQueue().stop();
+        $pma_drop_handler.fadeOut();
+        $pma_drop_handler.html(PMA_messages.dropImportDropFiles);
     },
     /**
      * Called when upload has finished
@@ -408,6 +409,8 @@ PMA_DROP_IMPORT = {
      */
     _drop: function (event) {
         var dbname = PMA_commonParams.get('db');
+        var server = PMA_commonParams.get('server');
+
         //if no database is selected -- no
         if (dbname !== '') {
             var files = event.originalEvent.dataTransfer.files;
@@ -423,15 +426,17 @@ PMA_DROP_IMPORT = {
                 var ext  = (PMA_DROP_IMPORT._getExtension(files[i].name));
                 var hash = AJAX.hash(++PMA_DROP_IMPORT.uploadCount);
 
-                $(".pma_sql_import_status div").append('<li data-hash="' +hash +'">' +
+                var $pma_sql_import_status_div = $(".pma_sql_import_status div");
+                $pma_sql_import_status_div.append('<li data-hash="' +hash +'">' +
                     ((ext !== '') ? '' : '<img src="./themes/dot.gif" title="invalid format" class="icon ic_s_notice"> ') +
                     escapeHtml(files[i].name) + '<span class="filesize" data-filename="' +
                     escapeHtml(files[i].name) +'">' +(files[i].size/1024).toFixed(2) +
                     ' kb</span></li>');
 
                 //scroll the UI to bottom
-                $(".pma_sql_import_status div").scrollTop(
-                    $(".pma_sql_import_status div").scrollTop() + 50);  //50 hardcoded for now
+                $pma_sql_import_status_div.scrollTop(
+                    $pma_sql_import_status_div.scrollTop() + 50
+                );  //50 hardcoded for now
 
                 if (ext !== '') {
                     // Increment liveUploadCount by one
@@ -444,9 +449,9 @@ PMA_DROP_IMPORT = {
                     //uploading
                     var fd = new FormData();
                     fd.append('import_file', files[i]);
-                    // todo: method to find the value below
-                    fd.append('noplugin', '539de66e760ee');
+                    fd.append('noplugin', Math.random().toString(36).substring(2, 12));
                     fd.append('db', dbname);
+                    fd.append('server', server);
                     fd.append('token', PMA_commonParams.get('token'));
                     fd.append('import_type', 'database');
                     // todo: method to find the value below

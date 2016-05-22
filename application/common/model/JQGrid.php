@@ -10,7 +10,8 @@ class JQGrid_item
 	// 存放jqgrid信息的表
 	var $data_table;
 	// js的初始化函数
-	var $datatype;
+	var $url;
+	var $datatype='json';
 	var $height;
 	var $colNames;
 	var $colModel;
@@ -22,6 +23,10 @@ class JQGrid_item
 		{
 			throw new Exception("data_table is empty");
 		}
+		if(empty($this->url))
+		{
+			$this->url='?s=/'.MODULE_NAME.'/'.CONTROLLER_NAME.'/jqgrid_data';
+		}
 		if ($this->debug)
 		{
 			// 開發時開啓debug,检查表中是否增加过字段
@@ -32,25 +37,25 @@ class JQGrid_item
 					->where("field_name",$v)
 					->find())
 				{
-					$d['table_name'] = $this->table_name;
+					$d['data_table'] = $this->data_table;
 					$d['field_name'] = $v;
 					$d['jqgrid_name'] = $v;
 					$d['jqgrid_index'] = $v;
 					if ($tableinfo['bind'][$v] == PDO::PARAM_STR)
 					{
-						$d['jqgrid_width'] = 50;
+						$d['jqgrid_width'] = 300;
 						$d['jqgrid_align'] = 'right';
 						$d['jqgrid_sorttype'] = false;
 					}
 					else if ($tableinfo['bind'][$v] == PDO::PARAM_INT)
 					{
-						$d['jqgrid_width'] = 11;
+						$d['jqgrid_width'] = 80;
 						$d['jqgrid_align'] = 'left';
 						$d['jqgrid_sorttype'] = 'int';
 					}
 					else
 					{
-						$d['jqgrid_width'] = 5;
+						$d['jqgrid_width'] = 50;
 						$d['jqgrid_align'] = 'center';
 						$d['jqgrid_sorttype'] = false;
 					}
@@ -69,7 +74,7 @@ class JQGrid_item
 			$this->table_id = "pager_" . $this->data_table;
 		}
 		$cols = Db::name($this->jqgrid_talbe)->where("data_table",$this->data_table)->select();
-		foreach ($clos as $v)
+		foreach ($cols as $v)
 		{
 			$this->colNames[] = $v['jqgrid_name'];
 			$col = [ ];
@@ -80,44 +85,82 @@ class JQGrid_item
 			$col['sorttype'] = $v['jqgrid_sorttype'];
 			$this->colModel[] = $col;
 		}
+		return $this;
 	}
-	function create_data()
+	function get_data()
 	{
-		
-	}
+		$cols = Db::name($this->jqgrid_talbe)->where("data_table",$this->data_table)->select();
+		foreach ($cols as $v)
+		{
+			$this->colNames[] = $v['jqgrid_name'];
+		}
+		$_search=Input("_search");
+		$rows=Input("rows");
+		$page=Input("page",1);
+		$sidx=input("sidx");
+		$sord=input("asc","asc");
+		$data['page']=$page;
+		$data['total']=Db::name($this->data_table)->field($this->colNames)->count();	
+		$data['records']=Db::name($this->data_table)->field($this->colNames)->limit(($page-1)*$rows,$rows)->count();	
+		$rows=Db::name($this->data_table)->field($this->colNames)->limit(($page-1)*$rows,$rows)->select();	
+		foreach ($rows as $k=>$v)
+		{
+			$d=array();
+			$d['id']=$v['id'];
+			foreach($v as $v1)
+			{
+				$d['cell'][]=$v1;
+			}
+			$data['rows'][]=$d;
+		}
+		return 	$data;
+	}		
 }
 class JQGrid
 {
 	// 用table表生成jqgrid
-	var $table_id;
+	var $table_id="list";
 	// 把内容放在$table_id中
 	var $pager_id;
 	// 把分页放在pager_id中
 	var $js_init_function = "pageInit";
 	var $jqgrid_item; // jqgrid的配置项
-	function __construct ($items)
+	/**
+	 * 
+	 * @param unknown $args 可以傳表名或是一個數組
+	 */
+	function __construct ($args)
 	{
-		if(is_string($items))
+		if(is_string($args))
 		{
-			$items['data_table']=$items;
+			$items['data_table']=$args;
 		}
-		$jqgrid_item = new JQGrid_item();
+		else 
+		{
+			$items=$args; 
+		}
+		$this->jqgrid_item = new JQGrid_item();
 		foreach ($items as $k => $v)
 		{
-			if (property_exists($jqgrid_item,$k))
+			if (property_exists($this->jqgrid_item,$k))
 			{
-				$jqgrid_item->$k = $v;
+				$this->jqgrid_item->$k = $v;
 			}
 			$this->$k = $v;
 		}
 	}
 	function show ()
 	{
-		echo '$(function(){' . $this->js_init_function . '();});';
-		echo 'function ' . $this->js_init_function . '(){';
-		echo 'jQuery("#' . $this->table_id . '").jqGrid(';
-		echo json_encode($d);
-		echo ')';
-		echo '}';
+		$str=     '$(function(){ ' . $this->js_init_function . '(); });';
+		$str=$str.'  function ' . $this->js_init_function . '(){'."\n";
+		$str=$str.'   jQuery("#' . $this->table_id . '").jqGrid(';
+		$str=$str.json_encode($this->jqgrid_item->create_js_item())."\n";
+		$str=$str.'   )'."\n";
+		$str=$str.'}'."\n";
+		return $str;
+	}
+	function data()
+	{
+		return 	json_encode($this->jqgrid_item->get_data());
 	}
 }
